@@ -1,15 +1,15 @@
 {
-          "name": "SIGMA-MD",
+          "name": "SITHU-MD",
           "version": "1.2.7",
-          "description": "SIGMA-MD A Whatsapp Bot By Maher Zubair",
+          "description": "SITHU-MD A Whatsapp Bot By Sithum Kalhara",
           "main": "lib/client.js",
           "type": "commonjs",
           "license": "GPL-3.0",
           "scripts": { 
-                    "start": "pm2 start lib/client.js --deep-monitoring --attach --name SIGMA-MD",
-                    "stop": "pm2 stop SIGMA-MD"
+                    "start": "pm2 start lib/client.js --deep-monitoring --attach --name SITHU-MD",
+                    "stop": "pm2 stop SITHU-MD"
           },
-          "author": "Maher Zubair",
+          "author": "Sithum Kalhara",
           "dependencies": {
                     "@adiwajshing/keyed-db": "^0.2.4",
                     "@bochilteam/scraper": "latest",
