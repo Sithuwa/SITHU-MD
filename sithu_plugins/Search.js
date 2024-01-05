@@ -17,25 +17,6 @@ const fetch = require('node-fetch')
    const { shazam } = require('../lib')
    let yts = require("secktor-pack");
 
-   Module_Exports({
-           kingcmd: "find",
-           kingclass: "search",
-           infocmd: "Finds info about song",
-           kingpath: __filename,
-       },
-       async(message) => {
-         try{
-            let mime = message.reply_message ? message.reply_message.mtype : ''
-            if (!/audio/.test(mime)) return message.reply(`Reply audio ${prefix}find`);
-            let buff = await message.reply_message.download();
-            let data = await shazam(buff);
-            if (!data || !data.status) return message.send(data);
-            let h =`*TITLE: _${data.title}_* \n*ARTIST: _${data.artists}_*\n *ALBUM:* _${data.album}_ `
-//   *𝚁𝚎𝚕𝚎𝚊𝚜𝚎:* _${data.release_date}
-           await message.bot.sendUi(message.jid, { caption: h,  },{quoted : message} , "text",'true' );
-       }catch(e){return await message.error(`${e}\n\n command: find`,e,`*_Didn't get any results, Sorry!_*`) }
-})
-
     //------------------------------------------------------------------------------------
 Module_Exports({
             kingcmd: 'ss',
@@ -57,25 +38,6 @@ let limit = 5;
 catch (err) { return citel.reply("```Error While Fetching Snapshot```")}
         }
     )
-
-//-----------------------------------
-
-Module_Exports({
-    kingcmd: 'lyrics',
-    kingclass: "search",
-    infocmd: "lyrice search cmd",
-},
-  async(message, text,{cmdName}) => {
-    if (!text) return message.reply(`*_Uhh please, give me song name_*\n*_Example ${prefix+cmdName} blue eyes punjabi_*`);
-    try {
-      const res = await ( await fetch(`https://inrl-web.onrender.com/api/lyrics?text=${text}`) ).json();
-      if(!res.status) return message.send("*Please Provide valid name!!!*");
-      if(!res.result) return message.send("*There's a problem, try again later!*");
-      const { thumb,lyrics,title,artist } = res.result, tbl= "```", tcl ="*", tdl = "_*", contextInfo = { externalAdReply: { ...(await message.bot.contextInfo("SITHU-MD",`Lyrics-${text}`))} }
-  await send(message, `*𝚃𝚒𝚝𝚕𝚎:* ${title}\n*𝙰𝚛𝚝𝚒𝚜𝚝:* ${artist} \n${tbl}${lyrics}${tbl} `,{contextInfo  : contextInfo },"");
-
-}catch(e){return await message.error(`${e}\n\n command: ${cmdName}`,e,`*_Didn't get any lyrics, Sorry!_*`) }
-     })
 
     //---------------------------------------------------------------------------
 Module_Exports({
@@ -127,10 +89,28 @@ Module_Exports({
         infocmd: "Sends weather info about asked place.",
         use: 'Lahore',
     },
-    async(sithu, person, text) => {
-const _0x51287e=_0x8f43;(function(_0x208e10,_0x52e448){const _0xb617f6=_0x8f43,_0x1bb95b=_0x208e10();while(!![]){try{const _0x63e6e8=-parseInt(_0xb617f6(0x109))/(0xd75+0x11c7+0xd*-0x267)*(parseInt(_0xb617f6(0x159))/(-0xa*0x1ba+0xac+-0x2*-0x84d))+-parseInt(_0xb617f6(0x142))/(0x785+-0x1*0xb3f+0x3bd)+parseInt(_0xb617f6(0x10e))/(0x17f9+0xb35+0x232a*-0x1)+-parseInt(_0xb617f6(0x145))/(-0x7f5+0x1*-0xe8f+0x1689)*(parseInt(_0xb617f6(0x121))/(0x1f35+0x1853+-0x3782))+-parseInt(_0xb617f6(0x127))/(-0x2b*0xc7+0x2044+0x130)*(parseInt(_0xb617f6(0x12b))/(-0x1349*-0x1+0x1*0x2480+-0x37c1))+parseInt(_0xb617f6(0x107))/(-0x1c55+-0x59*0x29+0x2a9f)+-parseInt(_0xb617f6(0x10a))/(0x174f+-0x19a4+0x25f)*(-parseInt(_0xb617f6(0x14a))/(0xdab*-0x1+0x15fd+0xa3*-0xd));if(_0x63e6e8===_0x52e448)break;else _0x1bb95b['push'](_0x1bb95b['shift']());}catch(_0x2cb641){_0x1bb95b['push'](_0x1bb95b['shift']());}}}(_0x3c87,0x3cc9b*-0x1+-0x6*0xb747+0x10cc3f));if(!text)return person[_0x51287e(0x158)](_0x51287e(0x11a)+_0x51287e(0x132)+_0x51287e(0x118)+prefix+(_0x51287e(0x12d)+_0x51287e(0x11d)));function _0x8f43(_0x38f783,_0x37e92c){const _0x40f902=_0x3c87();return _0x8f43=function(_0x1d7b48,_0x2f729b){_0x1d7b48=_0x1d7b48-(-0x183f*-0x1+-0x8df+0x7*-0x20d);let _0x24d820=_0x40f902[_0x1d7b48];return _0x24d820;},_0x8f43(_0x38f783,_0x37e92c);}person[_0x51287e(0x155)](_0x51287e(0x130)+_0x51287e(0x148)+_0x51287e(0x13e)+_0x51287e(0x12c)+text);try{let wdata=await axios[_0x51287e(0x14e)](_0x51287e(0x15b)+_0x51287e(0x128)+_0x51287e(0x151)+_0x51287e(0x137)+_0x51287e(0x119)+text+(_0x51287e(0x134)+_0x51287e(0x117)+_0x51287e(0x12a)+_0x51287e(0x111)+_0x51287e(0x146)+_0x51287e(0x15a)+_0x51287e(0x112))),mz='';mz+=_0x51287e(0x13a)+sktit+(_0x51287e(0x14c)+_0x51287e(0x129)+_0x51287e(0x131)+_0x51287e(0x12f)+_0x51287e(0x11f))+fancytext(_0x51287e(0x144)+'f*',0x7*-0x145+-0x270b*0x1+0x6d9*0x7)+'\x20'+text+'\x0a',mz+=_0x51287e(0x13c)+fancytext(_0x51287e(0x13f)+'*',-0x5*0x3c7+-0x3*0x6ff+-0x27e1*-0x1)+'\x20'+wdata[_0x51287e(0x133)][_0x51287e(0x10d)][_0x51287e(0x143)]+'\x0a',mz+=_0x51287e(0x13c)+fancytext(_0x51287e(0x157)+_0x51287e(0x156),-0x47d*-0x1+-0x2*0x1061+0x1c46)+'\x20'+wdata[_0x51287e(0x133)][_0x51287e(0x126)][0x19+0xaaa+-0xac3][_0x51287e(0x150)]+'\x0a',mz+=_0x51287e(0x13c)+fancytext(_0x51287e(0x15d)+_0x51287e(0x12e),0x169a+0xb82+-0x221b)+'\x20'+wdata[_0x51287e(0x133)][_0x51287e(0x126)][-0xf8e*0x2+-0x36+0x1a6*0x13][_0x51287e(0x125)+'n']+'\x0a',mz+=_0x51287e(0x13c)+fancytext(_0x51287e(0x122)+_0x51287e(0x141),-0x233*-0x5+-0x17c8+0xcca)+'\x20'+wdata[_0x51287e(0x133)][_0x51287e(0x150)][_0x51287e(0x139)]+'\x0a',mz+=_0x51287e(0x13c)+fancytext(_0x51287e(0x120)+_0x51287e(0x138),0x2b*0x65+-0x1418+-0x191*-0x2)+'\x20'+wdata[_0x51287e(0x133)][_0x51287e(0x150)][_0x51287e(0x140)]+'\x0a',mz+=_0x51287e(0x13c)+fancytext(_0x51287e(0x152)+'•*',0x22b2*0x1+0x416*-0x4+-0x1259)+'\x20'+wdata[_0x51287e(0x133)][_0x51287e(0x150)][_0x51287e(0x147)]+'\x0a',mz+=_0x51287e(0x13c)+fancytext(_0x51287e(0x116)+'•*',-0x25a+0x13fd+-0x7a*0x25)+'\x20'+wdata[_0x51287e(0x133)][_0x51287e(0x150)][_0x51287e(0x10b)]+'\x0a',mz+=_0x51287e(0x13c)+fancytext(_0x51287e(0x123)+_0x51287e(0x15c),0x1*-0x1176+0x2*-0x9c5+0x2501)+'\x20'+wdata[_0x51287e(0x133)][_0x51287e(0x10f)][_0x51287e(0x14b)]+'\x0a',mz+=_0x51287e(0x13c)+fancytext(_0x51287e(0x124)+'•*',0xa*-0x4b+-0x16*0x153+0x1*0x2011)+'\x20'+wdata[_0x51287e(0x133)][_0x51287e(0x14d)][_0x51287e(0x115)]+'\x0a',mz+=_0x51287e(0x13c)+fancytext(_0x51287e(0x154)+_0x51287e(0x108),0x216d*0x1+-0xfe3+-0x1189)+'\x20'+wdata[_0x51287e(0x133)][_0x51287e(0x14d)][_0x51287e(0x13d)]+(_0x51287e(0x14f)+_0x51287e(0x11b)+_0x51287e(0x110)+'\x20')+name[_0x51287e(0x106)]+'*';const slog=await getBuffer(global[_0x51287e(0x114)]);let king={'image':{'url':await botpic()},'text':mz,'footer':tlang()[_0x51287e(0x10c)],'headerType':0x4,'contextInfo':{'externalAdReply':{'title':''+Gname,'body':_0x51287e(0x11c)+'e','thumbnail':slog,'mediaType':0x4,'mediaUrl':'','sourceUrl':''+waUrl}}};sithu[_0x51287e(0x136)+'e'](person[_0x51287e(0x105)],king,{'quoted':person});}catch{person[_0x51287e(0x158)](_0x51287e(0x153)+_0x51287e(0x149)+_0x51287e(0x135)+_0x51287e(0x13b)+_0x51287e(0x113)+_0x51287e(0x11e)+_0x51287e(0x132));}function _0x3c87(){const _0x4530d8=['ric&appid=','...!\x0aEx:\x20','weather?q=','*_Give\x20me\x20','━━⦿\x0a*╰┈➤𝙶𝙴','Easy\x20to\x20Us','hore','e\x20a\x20Valid\x20','\x0a┃✯\x20\x20\x20\x20\x20\x20\x20','*•feels-li','210ztztvU','*•temperat','*•wind-spe','*•latitude','descriptio','weather','64771YWHcXe','i.openweat','ꜱɪᴛʜᴜ\x20ᴹᴰ*\x0a','060a6bcfa1','296kRcLkx','nfo\x20Of_*\x20','weather\x20la','ion•*','ᴇʀ\x20sᴇᴀʀᴄʜ*','*_Wait\x20Whi','┃┗➛\x20*ᴡᴇᴀᴛʜ','Location_*','data','&units=met','n\x20is\x20Inval','sendMessag','/data/2.5/','ke•*','temp','┏━━⟪⟪\x20','id_*\x0a*_Ple','┃✯\x20','lon','\x20Weather\x20I','*•country•','feels_like','ure•*','1581732wlAYJg','country','*weather\x20o','58245bylUcp','97a212b192','pressure','le\x20Getting','en\x20Locatio','11DEXvEm','speed','\x20⟫━⦿\x0a┃┏➛\x20*','coord','get','\x0a┗━━━━━━━━','main','hermap.org','*•pressure','*_Your\x20Giv','*•longitud','send','n•*','*•conditio','reply','20WMgJfp','73&languag','https://ap','ed•*','*•descript','chat','botname','8891955MoXLZC','e•*','74787QomYGj','10062110AcRGYp','humidity','footer','sys','2405384TzfFHL','wind','𝙽𝙴𝚁𝙰𝚃𝙴𝙳\x20𝙱𝚈','9809c2cd4d','e=en','ase\x20Give\x20M','slogo','lat','*•humidity'];_0x3c87=function(){return _0x4530d8;};return _0x3c87();}
+    async(Void, citel, text) => {
+            if (!text) return citel.reply("Give me location.Baka!!");
+            let wdata = await axios.get(
+                `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=en`
+            );
+            let textw = "";
+            textw += `*🌟Weather of  ${text}*\n\n`;
+            textw += `*Weather:-* ${wdata.data.weather[0].main}\n`;
+            textw += `*Description:-* ${wdata.data.weather[0].description}\n`;
+            textw += `*Avg Temp:-* ${wdata.data.main.temp}\n`;
+            textw += `*Feels Like:-* ${wdata.data.main.feels_like}\n`;
+            textw += `*Pressure:-* ${wdata.data.main.pressure}\n`;
+            textw += `*Humidity:-* ${wdata.data.main.humidity}\n`;
+            textw += `*Humidity:-* ${wdata.data.wind.speed}\n`;
+            textw += `*Latitude:-* ${wdata.data.coord.lat}\n`;
+            textw += `*Longitude:-* ${wdata.data.coord.lon}\n`;
+            textw += `*Country:-* ${wdata.data.sys.country}\n`;
+
+
+            return await citel.reply(textw)
         }
-)
+    )
     //---------------------------------------------------------------------------
 Module_Exports({
             kingcmd: "horo",
@@ -318,22 +298,22 @@ Module_Exports({
         use: '9112345678xx',
         kingpath: __filename,
     },
-    async(Void, citel, text) => {
- if(!text) return await citel.reply(`*_Give Me Number without + sign_*\nEx: ${prefix}iswa 9234663191xx`)
+        async(Void, citel, text) => {
         var inputnumber = text.split(" ")[0]
-        if (!inputnumber.includes('x')) return citel.reply(`*You did not add x*\nEx: ${prefix}iswa 9234663191xx`)
-        citel.reply(`*Searching WhatsApp accounts in given range...*`)
+        if (!inputnumber.includes('x')) return citel.reply('You did not add x\nExample: iswa 947593336xx')
+        citel.reply(`Searching for WhatsApp account in given range...`)
 
-        function countInstances(string, word) {  return string.split(word).length - 1; }
+        function countInstances(string, word) {
+            return string.split(word).length - 1;
+        }
         var number0 = inputnumber.split('x')[0]
         var number1 = inputnumber.split('x')[countInstances(inputnumber, 'x')] ? inputnumber.split('x')[countInstances(inputnumber, 'x')] : ''
         var random_length = countInstances(inputnumber, 'x')
         var randomxx;
-        if (random_length == 1) { randomxx = 10 } 
-        else if (random_length == 2) { randomxx = 100 } 
-        else if (random_length == 3) { randomxx = 1000 }
- 
-        text = `*--『 List of Whatsapp Numbers 』--*\n\n`
+        if (random_length == 1) {   randomxx = 10 } 
+        else if (random_length == 2) { randomxx = 100  } 
+        else if (random_length == 3) {randomxx = 1000  }
+        var text = `*--『 List of Whatsapp Numbers 』--*\n\n`
         var nobio = `\n*Bio:* || \nHey there! I am using WhatsApp.\n`
         var nowhatsapp = `\n*Numbers with no WhatsApp account within provided range.*\n`
         for (let i = 0; i < randomxx; i++) {
@@ -343,61 +323,31 @@ Module_Exports({
             var status3 = nu[Math.floor(Math.random() * nu.length)]
             var dom4 = nu[Math.floor(Math.random() * nu.length)]
             var random;
-            if (random_length == 1) { random = `${status1}` } 
-            else if (random_length == 2) {random = `${status1}${status2}` } 
-            else if (random_length == 3) {random = `${status1}${status2}${status3}` } 
-            else if (random_length == 4) {random = `${status1}${status2}${status3}${dom4}` }
-         
+            if (random_length == 1) {
+                random = `${status1}`
+            } else if (random_length == 2) {
+                random = `${status1}${status2}`
+            } else if (random_length == 3) {
+                random = `${status1}${status2}${status3}`
+            } else if (random_length == 4) {
+                random = `${status1}${status2}${status3}${dom4}`
+            }
             var anu = await Void.onWhatsApp(`${number0}${i}${number1}@s.whatsapp.net`);
             var anuu = anu.length !== 0 ? anu : false
-            try 
-            {
-                  try { var anu1 = await Void.fetchStatus(anu[0].jid); } 
-                  catch { var anu1 = '401' ; }
-                  if (anu1 == '401' || anu1.status.length == 0) { nobio += `wa.me/${anu[0].jid.split("@")[0]}\n` ; } 
-                  else {  text += `*•𝙽𝚄𝙼𝙱𝙴𝚁•* wa.me/${anu[0].jid.split("@")[0]}\n*•𝙱𝙸𝙾•* ${anu1.status}\n*•𝙻𝙰𝚂𝚃 𝚄𝙿𝙳𝙰𝚃𝙴•* ${moment(anu1.setAt).tz('Asia/karachi').format('HH:mm:ss DD/MM/YYYY')}\n\n` ;   }
-            } catch { nowhatsapp += `${number0}${i}${number1}\n`; }
+            try {
+                try {
+                    var anu1 = await Void.fetchStatus(anu[0].jid)
+                } catch {
+                    var anu1 = '401'
+                }
+                if (anu1 == '401' || anu1.status.length == 0) {
+                    nobio += `wa.me/${anu[0].jid.split("@")[0]}\n`
+                } else {
+                    text += `🧐 *Number:* wa.me/${anu[0].jid.split("@")[0]}\n ✨*Bio :* ${anu1.status}\n🍁*Last update :* ${moment(anu1.setAt).tz('Asia/Colombo').format('HH:mm:ss DD/MM/YYYY')}\n\n`
+                }
+            } catch { nowhatsapp += `${number0}${i}${number1}\n` }
         }
-        return await citel.reply(`${text}${nobio}${nowhatsapp}*╰┈➤ 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 ${name.botname}*`)
+        citel.reply(`${text}${nobio}${nowhatsapp}`)
 
     }
 )
-
-
-Module_Exports({
-        kingcmd: "nowa",
-        kingclass: "search",
-        infocmd: "Searches in given rage about given number.",
-        use: '9112345678xx',
-        kingpath: __filename,
-    },
-    async(Void, citel, text) => {
-if(!text) return await citel.reply(`*_Give Me Number without + sign_*\nEx: ${prefix}nowa 9234663191xx`)
-const inputNumber = text.split(" ")[0]
-if (!inputNumber.includes('x')) return citel.reply(`*You did not add x*\nEx: ${prefix}nowa 92346631xxxx`)
-citel.reply(`*Searching for WhatsApp account in the given range...*`);
-function countInstances(string, word) { return string.split(word).length - 1; }
-const number0 = inputNumber.split('x')[0];
-const number1 = inputNumber.split('x').slice(-1)[0] || '';
-const randomLength = countInstances(inputNumber, 'x');
-const randomxx = [10, 100, 1000][randomLength - 1] || 0;
-let nobio = `\n*『Accounts With No Bio』* \n`;
- let nobios='';
-let nowhatsapp = `*『 Numbers With No WhatsApp』* \n\n`;
-for (let i = 0; i < randomxx; i++) 
-{
-    const nu = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    const status = nu.slice(0, randomLength).map(() => nu[Math.floor(Math.random() * nu.length)]).join('');
-    const random = `${status}${nu[Math.floor(Math.random() * nu.length)]}`.slice(0, randomLength);
-    const anu = await Void.onWhatsApp(`${number0}${i}${number1}`);
-    const anuu = anu.length !== 0 ? anu : false;
-    try 
-    {
-         const anu1 = await Void.fetchStatus(anu[0].jid);
-         if (anu1 === '401' || anu1.status.length === 0) {  nobios += `wa.me/${anu[0].jid.split("@")[0]}\n`; } 
-    } catch { nowhatsapp += `${number0}${i}${number1}\n`;  }
-}
-if(!nobios){ nobio = ''; } else {nobio += nobios+'\n' ;}
-return await citel.reply(`${nobio}${nowhatsapp}*╰┈➤ 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 ${name.botname}*`);
-  
-})
