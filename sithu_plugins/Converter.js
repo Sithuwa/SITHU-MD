@@ -13,8 +13,6 @@ const { sck1, tiny, fancytext,getBuffer, listall,Module_Exports , TelegraPh , na
 const fs = require('fs-extra');
 const util = require('util');
 const { exec } = require('child_process')
-const PastebinAPI = require("pastebin-js");
-pastebin = new PastebinAPI("EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL");
 const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter");
 
     //---------------------------------------------------------------------------
@@ -139,7 +137,7 @@ let media  = await getBuffer(url)
     //---------------------------------------------------------------------------
  //---------------------------------------------------------------------------
 Module_Exports({
-            kingcmd: "stiker",
+            kingcmd: "sticker",
             shortcut: ["s"],
             infocmd: "Makes sticker of replied image/video.",
             kingclass: "sticker",
@@ -481,22 +479,6 @@ async(sithu, citel, text) => {
     }catch(e){ return console.log("*Your Request Not Be Proceed due to Error.*  \n*_Error :_* ", e)}
 }
 )
-//-------------------------------------------------------------------
-Module_Exports({
-    kingcmd: "pastebin",
-    shortcut:["pbin"],
-    infocmd: "To check ping",
-    kingclass: "converter",
-    kingpath: __filename,
-    react:"💛",
-},
-async(Void, citel,text) => { 
-if (!text) { text=citel.quoted.text;}
-    if(!text) return citel.reply('*_Please Reply To Any Text To Get Link._*');
-    let data = await pastebin.createPaste(text, "Sithum Kalhara");
-    return citel.reply(`*_Here is your link._*\n`+data+`\n${sgen}`);
-}
-);
 //----------------------------------------------- ---------------------------
 Module_Exports({
     kingcmd: "paste",
@@ -531,7 +513,7 @@ async(Void, citel, text) => {
 
 let a = await getBuffer(`https://api.erdwpe.com/api/maker/attp?text=${text}`)
 
-return citel.reply(a,{packname:'SITHU_MD',author:'ZUBI'},"sticker") 
+return citel.reply(a,{packname:'SITHU_MD',author:'SITHU'},"sticker") 
 
 }
 
@@ -557,7 +539,7 @@ async(Void, citel, text) => {
 
 let a = await getBuffer(`https://api.lolhuman.xyz/api/attp?apikey=GataDios&text=${text}`)
 
-return citel.reply(a,{packname:'SITHU_MD',author:'ZUBI'},"sticker") 
+return citel.reply(a,{packname:'SITHU_MD',author:'SITHU'},"sticker") 
 
 }
 
@@ -583,7 +565,7 @@ async(Void, citel, text) => {
 
 let a = await getBuffer(`https://api.lolhuman.xyz/api/attp2?apikey=GataDios&text=${text}`)
 
-return citel.reply(a,{packname:'SITHU_MD',author:'ZUBI'},"sticker") 
+return citel.reply(a,{packname:'SITHU_MD',author:'SITHU'},"sticker") 
 
 }
 
@@ -609,7 +591,7 @@ async(Void, citel, text) => {
 
 let a = await getBuffer(`https://api.lolhuman.xyz/api/ttp?apikey=GataDios&text=${text}`)
 
-return citel.reply(a,{packname:'SITHU_MD',author:'ZUBI'},"sticker") 
+return citel.reply(a,{packname:'SITHU_MD',author:'SITHU'},"sticker") 
 
 }
 
@@ -635,7 +617,7 @@ async(Void, citel, text) => {
 
 let a = await getBuffer(`https://api.lolhuman.xyz/api/ttp2?apikey=GataDios&text=${text}`)
 
-return citel.reply(a,{packname:'SITHU_MD',author:'ZUBI'},"sticker") 
+return citel.reply(a,{packname:'SITHU_MD',author:'SITHU'},"sticker") 
 
 }
 
@@ -661,7 +643,7 @@ async(Void, citel, text) => {
 
 let a = await getBuffer(`https://api.lolhuman.xyz/api/ttp3?apikey=GataDios&text=${text}`)
 
-return citel.reply(a,{packname:'SITHU_MD',author:'ZUBI'},"sticker") 
+return citel.reply(a,{packname:'SITHU_MD',author:'SITHU'},"sticker") 
 
 }
 
@@ -687,7 +669,7 @@ async(Void, citel, text) => {
 
 let a = await getBuffer(`https://api.lolhuman.xyz/api/ttp5?apikey=GataDios&text=${text}`)
 
-return citel.reply(a,{packname:'SITHU_MD',author:'ZUBI'},"sticker") 
+return citel.reply(a,{packname:'SITHU_MD',author:'SITHU'},"sticker") 
 
 }
 
@@ -713,7 +695,7 @@ async(Void, citel, text) => {
 
 let a = await getBuffer(`https://api.lolhuman.xyz/api/ttp6?apikey=GataDios&text=${text}`)
 
-return citel.reply(a,{packname:'SITHU_MD',author:'ZUBI'},"sticker") 
+return citel.reply(a,{packname:'SITHU_MD',author:'SITHU'},"sticker") 
 
 }
 
