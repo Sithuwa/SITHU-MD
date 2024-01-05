@@ -2,10 +2,9 @@ const { story, Module_Exports, generateList } = require('../lib/')
 
 Module_Exports(
   {
-    pattern: 'story ?(.*)',
-    fromMe: true,
-    desc: 'Download Instagram stories',
-    type: 'download',
+    kingpath: 'story ?(.*)',
+    infocmd: 'Download Instagram stories',
+    kingclass: 'download',
   },
   async (message, match) => {
     match = match || message.reply_message.text
