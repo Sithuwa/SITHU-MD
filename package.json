@@ -73,10 +73,10 @@
           },
           "repository": {
                     "type": "git",
-                    "url": "git+https://github.com/SuhailTechInfo/Secktor-bot.git"
+                    "url": "git+https://github.com/Sithuwa/SITHU-MD.git"
           },
           "bugs": {
-                    "url": "https://github.com/SuhailTechInfo/Secktor-bot/issues"
+                    "url": "https://github.com/Sithuwa/SITHU-MD/issues"
           },
-          "homepage": "https://github.com/SuhailTechInfo/Secktor-bot#readme"
+          "homepage": "https://github.com/Sithuwa/SITHU-MD#readme"
 }
