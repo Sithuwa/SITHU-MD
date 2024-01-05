@@ -116,7 +116,6 @@ Module_Exports({
             kingclass: "sticker",
 kingpath: __filename,
             use: ''
-            react:"💚",
         },
         async(sithu, citel, text) => {
 if(!text) return citel.reply("```Please, Give Me text```")
@@ -146,7 +145,6 @@ Module_Exports({
             kingclass: "sticker",
 kingpath: __filename,
             use: 'reply to any image/video'
-            react:"🥰",
         },
         async(sithu, citel, text) => {
  let mime = citel.mtype;
@@ -195,7 +193,6 @@ Module_Exports({
             kingclass: "sticker",
 kingpath: __filename,
             use: 'reply to any image/video.'
-            react:"🌍",
         },
         async(sithu, citel, text) => {
             if (!citel.quoted) return citel.reply(`*_Reply To any Image or video_*`);
@@ -228,7 +225,6 @@ Module_Exports({
             kingclass: "sticker",
 kingpath: __filename,
             use: 'reply to any image/video.'
-            react:"🤩",
         },
         async(sithu, citel, text) => {
             if (!citel.quoted) return citel.reply(`*_Reply To any Image or video_*`);
@@ -261,7 +257,6 @@ Module_Exports({
             kingclass: "sticker",
 kingpath: __filename,
             use: 'reply to any image/video'
-            react:"👻",
         },
         async(sithu, citel, text) => {
             if (!citel.quoted) return citel.reply(`*_Reply To any Image or video_*`);
