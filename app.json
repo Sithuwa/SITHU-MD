@@ -1,18 +1,18 @@
 {
-  "name": "SIGMA-MD WHATSAPP BOT BY MAHER ZUBAIR",
-  "description": "A Whatsapp Bot With Most Premium Features Makes Your Whatsapp Premium. For Any Help See My YT:https://www.youtube.com/@InnoxentTech",
-  "logo": "https://telegra.ph/file/e5768d0b5a4441b4e576b.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "SIGMA_MD", "SIGMA_BOT", "SIGMA","SIGMA_MD-BOT","Multi-Themes Bot","multi device"],
+  "name": "SITHU-MD WHATSAPP BOT",
+  "description": "A Whatsapp Bot With Most Premium Features Makes Your Whatsapp Premium. For Any Help See My YT:https://www.youtube.com/@SITHUWA-MD",
+  "logo": "https://telegra.ph/file/f9e51e5d61e439020720a.jpg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "SITHU_MD", "SITHU_BOT", "SITHU","SITHUWA_MD","Multi-Device-Bot","multi device"],
   "success_url": "/",
   "stack": "container",
 "env": {
   "OWNER_NAME": {
   "description": "Name of Bot Owner",
-      "value": "Maher Zubair"
+      "value": "SITHUM KALHARA"
   },
    "THUMB_IMAGE": {
     "description": "THUMBNAIL Image for bot.",
-     "value": "https://telegra.ph/file/03e49e6e2057568db8926.jpg"
+     "value": "https://telegra.ph/file/f9e51e5d61e439020720a.jpg"
     },
  "HEROKU_API_KEY": {
     "description": "Put Your Heroku Api Key Here",
@@ -44,9 +44,9 @@
      "value": "false"
     },
       "READ_MESSAGE": {
-    "description": "Fill the value false if you not want bot to read all messages.",
+    "description": "Fill the value true if you want bot to read all messages.",
      "required" :false,
-     "value": "true"
+     "value": "false"
     },
    "DISABLE_PM": {
     "description": "Disable bot in pm, Take it false if you wanna run bot in your pm",
@@ -64,10 +64,10 @@
   },
   "OWNER_NUMBER": {
     "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")",
-       "value": "923466319114"
+       "value": "94761516805"
   },
    "SESSION_ID": {
-    "description": "Please put your SESSION_ID here,if you don't have visit to get Session id\nhttps://replit.com/@Mehar-Zubair/SIGMA-MD?v=1"
+    "description": "Please put your SESSION_ID here"
   },
     "OPENAI_API_KEY": {
     "description": "Please put your OPENAI api key here.Get it from beta.openai.com ",
@@ -76,12 +76,12 @@
   },
   "WELCOME_MESSAGE": {
     "description": "Enter the message here which you want to see when a new user joins a Group.",
-       "value": " @pp *_HI Dear @user_*\n*_Welcome In ♥️ @gname_*\n*_Read The Description CareFully_*\n\n\n*_Support Me By Subscribing_*\n*_https://www.youtube.com/@InnoxentTech_*",
+       "value": " @pp *_HI Dear @user_*\n*_Welcome In 💛 @gname_*\n*_Read The Description CareFully_*\n\n\n*_Create By_*\n*_Sithum Kalhara_*",
        "required" :false
   },
   "MONGODB_URI": {
     "description": "Add Your Own, If you have key. Its a secret String for Mongodb Connection",
-     "value": "mongodb+srv://Maher-Zubair:SIGMA-MD@zubi.9g6b16y.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp"
+     "value": "mongodb+srv://SithumKalhara:97531@cluster0.iva7dbo.mongodb.net/?retryWrites=true&w=majority"
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
@@ -94,37 +94,37 @@
   },
   "PACK_NAME": {
     "description": "Put Sticker Pack_Name.",
-     "value": "sɪɢᴍᴀ ᴹᴰ",
+     "value": "sɪᴛʜᴜ_ᴍᴅ",
      "required": false 
   },
 "PACK_AUTHER": {
     "description": "Put Sticker Author_Name.",
-     "value": "ᴍᴀʜᴇʀ ᴢᴜʙᴀɪʀ",
+     "value": "𝚜𝚒𝚝𝚑𝚞𝚖 𝚔𝚊𝚕𝚑𝚊𝚛𝚊",
      "required": false 
   },
 "TIME_ZONE": {
   "description": "Add Your TimeZone. make sure the timzone is correct/Otherwise you will have errors",
-   "value": "Asia/Karachi"
+   "value": "Asia/Colombo"
     
 },
-"MZTIT": {
+"SKTIT": {
   "description": "Add Your Title",
-   "value": "🅼♥︎❚❚♥︎🆉"
+   "value": "💛SITHUWA💛"
     
 },
 "GNAME": {
   "description": "Add Your Group Name Here.You Can See in Most Commands",
-   "value": "sɪɢᴍᴀ ᴹᴰ-sᴜᴘᴘᴏʀᴛ",
+   "value": "sɪᴛʜᴜ-ᴍᴅ-sᴜᴘᴘᴏʀᴛ",
     "required": false
 },
 "WAURL": {
   "description": "Add Your Group Link.You Can See IT IN Most Commands",
-   "value": "https://chat.whatsapp.com/JM1yBMlveulDrAN22jHcWV",
+   "value": "https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi",
     "required": false
 },
 "BOT_NAME": {
   "description": "Add Your Own Bot Name",
-   "value": "sɪɢᴍᴀ ᴹᴰ"
+   "value": "sɪᴛʜᴜ_ᴍᴅ"
     
 },
 "REMOVE_BG_KEY": {
