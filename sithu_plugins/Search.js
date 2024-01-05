@@ -23,42 +23,19 @@ const fetch = require('node-fetch')
            infocmd: "Finds info about song",
            kingpath: __filename,
        },
-       async(Void, citel, text) => {
-            let mime = citel.quoted.mtype
-            if (!citel.quoted) return citel.reply(`Reply to Audio`);
-            if (!/audio/.test(mime)) return citel.reply(`Send/Reply audio ${prefix}shazam`);
-            let buff = await citel.quoted.download();
+       async(message) => {
+         try{
+            let mime = message.reply_message ? message.reply_message.mtype : ''
+            if (!/audio/.test(mime)) return message.reply(`Reply audio ${prefix}find`);
+            let buff = await message.reply_message.download();
             let data = await shazam(buff);
-            if (!data.status) return citel.send(data);
-            let search = await yts(data.title);
-            let anu = search.videos[0];
-            let h =`*Title : _${data.title}_*           
-*Artist : _${data.artists}_*            
-*To Download Song:- _${prefix}yta ${anu.url}_*
-   `
-//   *Album :* _${data.album}_    
-//   *Release :* _${data.release_date}
+            if (!data || !data.status) return message.send(data);
+            let h =`*TITLE: _${data.title}_* \n*ARTIST: _${data.artists}_*\n *ALBUM:* _${data.album}_ `
+//   *𝚁𝚎𝚕𝚎𝚊𝚜𝚎:* _${data.release_date}
+           await message.bot.sendUi(message.jid, { caption: h,  },{quoted : message} , "text",'true' );
+       }catch(e){return await message.error(`${e}\n\n command: find`,e,`*_Didn't get any results, Sorry!_*`) }
+})
 
-
-   let buttonMessaged = {
-                   image: { url: anu.thumbnail, },
-                   caption: h,
-                   footer: tlang().footer,
-                   headerType: 4,
-                   contextInfo: {
-                       externalAdReply: {
-                           title: data.artists,
-                           body: data.album,
-                           thumbnail: log0,
-                           mediaType: 2,
-                           mediaUrl: ``,
-                           sourceUrl: ``,
-                       },
-                   },
-               };
-               await Void.sendMessage(citel.chat, buttonMessaged, { quoted: citel, });
-       }
-    )
     //------------------------------------------------------------------------------------
 Module_Exports({
             kingcmd: 'ss',
@@ -88,21 +65,17 @@ Module_Exports({
     kingclass: "search",
     infocmd: "lyrice search cmd",
 },
-  async (m,match) => {
-    match = match || m.reply_message.text;
-    if(!match) return await m.send(lang.BASE.TEXT);
-    const res = await fetchJson(config.BASE_URL+'api/lyrics?text='+match);
-    if(!res.status) return m.send(lang.BASE.ERROR.format("Not Found"));
-    if(!res.result) return m.send(lang.BASE.ERROR.format(",try again"));
-    const { thumb,lyrics,title,artist } = res.result, tbl= "```", tcl ="*_", tdl = "_*";
-        const msg = lang.LYRICS.RESPONCE.format(tcl+artist+tdl,tcl+title+tdl)+`\n\n${tbl}${lyrics}${tbl}`;
-        return await m.client.sendMessage(m.from, {
-            image: {url : thumb},
-            caption :msg
-        }, {
-            quoted: m
-        })
-});
+  async(message, text,{cmdName}) => {
+    if (!text) return message.reply(`*_Uhh please, give me song name_*\n*_Example ${prefix+cmdName} blue eyes punjabi_*`);
+    try {
+      const res = await ( await fetch(`https://inrl-web.onrender.com/api/lyrics?text=${text}`) ).json();
+      if(!res.status) return message.send("*Please Provide valid name!!!*");
+      if(!res.result) return message.send("*There's a problem, try again later!*");
+      const { thumb,lyrics,title,artist } = res.result, tbl= "```", tcl ="*", tdl = "_*", contextInfo = { externalAdReply: { ...(await message.bot.contextInfo("SITHU-MD",`Lyrics-${text}`))} }
+  await send(message, `*𝚃𝚒𝚝𝚕𝚎:* ${title}\n*𝙰𝚛𝚝𝚒𝚜𝚝:* ${artist} \n${tbl}${lyrics}${tbl} `,{contextInfo  : contextInfo },"");
+
+}catch(e){return await message.error(`${e}\n\n command: ${cmdName}`,e,`*_Didn't get any lyrics, Sorry!_*`) }
+     })
 
     //---------------------------------------------------------------------------
 Module_Exports({
