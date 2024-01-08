@@ -80,15 +80,15 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
         async(Void, citel, text) => {
             const { commands } = require('../lib');
             if (text.split(" ")[0]) {
-                let arr = [];
+                let Maher = [];
                 const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
                 if (!cmd) return await citel.reply("*❌No Such commands.*");
-                else arr.push(`*🍁Command:* ${cmd.kingcmd}`);
-                if (cmd.kingclass) arr.push(`*🧩kingclass:* ${cmd.kingclass}`);
-                if (cmd.shortcut) arr.push(`*🧩Alias:* ${cmd.shortcut}`);
-                if (cmd.infocmd) arr.push(`*🧩infocmdription:* ${cmd.infocmd}`);
-                if (cmd.use) arr.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.kingcmd} ${cmd.use}\`\`\``);
-                return await citel.reply(arr.join('\n'));
+                else Maher.push(`*🍁Command:* ${cmd.kingcmd}`);
+                if (cmd.kingclass) Maher.push(`*🧩kingclass:* ${cmd.kingclass}`);
+                if (cmd.shortcut) Maher.push(`*🧩Alias:* ${cmd.shortcut}`);
+                if (cmd.infocmd) Maher.push(`*🧩infocmdription:* ${cmd.infocmd}`);
+                if (cmd.use) Maher.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.kingcmd} ${cmd.use}\`\`\``);
+                return await citel.reply(Maher.join('\n'));
             } else {
                 const cmds = {}
                 commands.map(async(command, index) => {
