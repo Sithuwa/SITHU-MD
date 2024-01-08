@@ -176,9 +176,6 @@ match = match || message.reply_message.text;
         if(!status) return await message.send("*Not Found*");
         return await message.send(await getBuffer(result.hd), {}, 'video');
 });
-
-}
-)
     //---------------------------------------------------------------------------
     Module_Exports({
         kingcmd: "video",
