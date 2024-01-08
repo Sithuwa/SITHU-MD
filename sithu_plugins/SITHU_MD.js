@@ -81,20 +81,20 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             const { commands } = require('../lib');
             if (text.split(" ")[0]) {
                 let arr = [];
-                const cmd = commands.find((cmd) => cmd.pattern === (text.split(" ")[0].toLowerCase()))
+                const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
                 if (!cmd) return await citel.reply("*❌No Such commands.*");
-                else arr.push(`*🍁Command:* ${cmd.pattern}`);
-                if (cmd.category) arr.push(`*🧩Category:* ${cmd.category}`);
-                if (cmd.alias) arr.push(`*🧩Alias:* ${cmd.alias}`);
-                if (cmd.desc) arr.push(`*🧩Description:* ${cmd.desc}`);
-                if (cmd.use) arr.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.pattern} ${cmd.use}\`\`\``);
+                else arr.push(`*🍁Command:* ${cmd.kingcmd}`);
+                if (cmd.kingclass) arr.push(`*🧩kingclass:* ${cmd.kingclass}`);
+                if (cmd.shortcut) arr.push(`*🧩Alias:* ${cmd.shortcut}`);
+                if (cmd.infocmd) arr.push(`*🧩infocmdription:* ${cmd.infocmd}`);
+                if (cmd.use) arr.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.kingcmd} ${cmd.use}\`\`\``);
                 return await citel.reply(arr.join('\n'));
             } else {
                 const cmds = {}
                 commands.map(async(command, index) => {
-                    if (command.dontAddCommandList === false && command.pattern !== undefined) {
-                        if (!cmds[command.category]) cmds[command.category] = []
-                        cmds[command.category].push(command.pattern)
+                    if (command.dontAddCommandList === false && command.kingcmd !== undefined) {
+                        if (!cmds[command.kingclass]) cmds[command.kingclass] = []
+                        cmds[command.kingclass].push(command.kingcmd)
                     }
                 })
                 const time = moment(moment())
@@ -119,15 +119,15 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
 │ ╰──────────────◆
 ╰───────────────⊷\n
 ` + '```'
-                for (const category in cmds) 
+                for (const kingclass in cmds) 
                 {
-                   str += `╭────❏ *${tiny(category)}* ❏\n` ;
-                   if(text.toLowerCase() == category.toLowerCase()){ str = `╭─────❏ *${tiny(category)}* ❏\n` ;      
-                        for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
+                   str += `╭────❏ *${tiny(kingclass)}* ❏\n` ;
+                   if(text.toLowerCase() == kingclass.toLowerCase()){ str = `╭─────❏ *${tiny(kingclass)}* ❏\n` ;      
+                        for (const plugins of cmds[kingclass]) { str += `│ ${fancytext(plugins,1)}\n` ; }
                         str += `╰━━━━━━━━━━━━━──⊷\n`  ;
                         break ;
                    }
-                   else { for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
+                   else { for (const plugins of cmds[kingclass]) { str += `│ ${fancytext(plugins,1)}\n` ; }
                          str += `╰━━━━━━━━━━━━━━──⊷\n`  ; 
                    }
   
@@ -165,10 +165,10 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
 ╰━━━━━━━━━━━──⊷\n`
 for (let i = 0; i < commands.length; i++) 
 {
-     if(commands[i].pattern==undefined) continue
-     str +=       `╭ ${i+1} *${fancytext(commands[i].pattern,1)}*\n` 
-     if(commands[i].desc=undefined) commands[i].desc=""
-     str += `╰➛ ${fancytext(commands[i].desc,1)}\n`
+     if(commands[i].kingcmd==undefined) continue
+     str +=       `╭ ${i+1} *${fancytext(commands[i].kingcmd,1)}*\n` 
+     if(commands[i].infocmd=undefined) commands[i].infocmd=""
+     str += `╰➛ ${fancytext(commands[i].infocmd,1)}\n`
 }
             return await Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: str })
         }
