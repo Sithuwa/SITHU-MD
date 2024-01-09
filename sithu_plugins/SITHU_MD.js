@@ -117,20 +117,7 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
 │ ╰──────────────◆
 ╰───────────────⊷\n
 ` + '```'
-                for (const kingclass in cmds) 
-                {
-                   str += `╭────❏ *${tiny(kingclass)}* ❏\n` ;
-                   if(text.toLowerCase() == kingclass.toLowerCase()){ str = `╭─────❏ *${tiny(kingclass)}* ❏\n` ;      
-                        for (const plugins of cmds[kingclass]) { str += `│ ${fancytext(plugins,1)}\n` ; }
-                        str += `╰━━━━━━━━━━━━━──⊷\n`  ;
-                        break ;
-                   }
-                   else { for (const plugins of cmds[kingclass]) { str += `│ ${fancytext(plugins,1)}\n` ; }
-                         str += `╰━━━━━━━━━━━━━━──⊷\n`  ; 
-                   }
-  
-                }
-                str+= `*⭐️Type:* _${prefix}help cmd_ name to know more about specific command.\n*Eg:* _${prefix}help attp_\n*Made with ❤️ in Nodejs* `
+
                 let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str
