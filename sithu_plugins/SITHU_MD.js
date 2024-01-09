@@ -1,44 +1,94 @@
-/**
- Copyright (C) 2022.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : sɪᴛʜᴜ_ᴍᴅ-Md
- * @author : SamPandey001 <https://github.com/SamPandey001>
- * @infocmdription : sɪᴛʜᴜ_ᴍᴅ,A Multi-functional whatsapp bot.
- * @version 0.0.6
- **/
+//══════════════════════════════════════════════════════════════════════════════════════════════════════// 
+//                                                                                                      //
+//                                   MULTI-DEVICE WHATSAPP BOT                                              //                                                                 //                                         𝚅.𝟷.𝟸.𝟽                                                   // 
+                         //
+//                                   CREATE BY SITHUM-KALHARA                                              //
+//                                                                                                      //
+//                                                                                                      //
+//══════════════════════════════════════════════════════════════════════════════════════════════════════//
 
-const os = require('os')
-const moment = require("moment-timezone")
-const fs = require("fs")
-const Config = require('../config')
-let { fancytext, tlang, tiny, runtime, formatp, botpic, prefix, sck1,name,Module_Exports } = require("../lib");
-const long = String.fromCharCode(8206)
-const sɪᴛʜᴜ_readmore = long.repeat(4001)
-const sɪᴛʜᴜ_ᴍᴅ = require('../lib/sithu_plugins')
+  const os = require('os')
+  let menus = false
+  const moment = require("moment-timezone")
+  const fs = require("fs")
 
-    //---------------------------------------------------------------------------
+  let { fancytext, tlang, tiny, runtime, formatp, botpic, getBuffer ,prefix, sck1,name, Module_Exports } = require("../lib");
+  const long = String.fromCharCode(8206)
+  const sɪᴛʜᴜ_readmore = long.repeat(4001)
+  const sɪᴛʜᴜ_speed = require('performance-now')
+  const sɪᴛʜᴜ_ᴍᴅ = require('../lib/sithu_plugins')
+  
+
+  //------------------------------------------------------------------------------------
+
+
+  sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
+          kingcmd: "ownner",
+          infocmd: "to check owner number",
+          kingclass: "general",
+
+      },
+      async(bot, person) => {
+          const name = require('../Setting')
+          const thmb = await getBuffer(global.THUMB_IMAGE)
+          const vcard = 'BEGIN:VCARD\n' +
+              'VERSION:3.0\n' +
+              'FN:' + name.ownername + '\n' +
+              'ORG:;\n' +
+              'TEL;type=CELL;type=VOICE;waid=' + global.owner + ':+' + global.owner + '\n' +
+              'END:VCARD'
+          let buttonMessaged = {
+              contacts: { displayName: name.ownername, contacts: [{ vcard }] },
+              contextInfo: {
+                  externalAdReply: {
+                      title: name.ownername,
+                      body: 'ᴛᴀᴘ ʜᴇʀᴇ ᴛᴏ ᴍᴇssᴀɢᴇ ᴍᴇ',
+                      renderLargerThumbnail: true,
+                      thumbnailUrl: ``,
+                      thumbnail: thmb,
+                      mediaType: 1,
+                      mediaUrl: '',
+                      sourceUrl: `https://wa.me/+` + owner + '?text=Hii+bro,I+am+' + person.pushName,
+                  },
+              },
+          };
+          return await bot.sendMessage(person.chat, buttonMessaged, {   quoted: person, });
+  
+      }
+  )
+
+  const readDirectory = (text) => {
+    return new Promise((resolve, reject) => {
+      fs.readdir(text, (err, files) => {
+        if (err) {reject('Error reading directory'); }
+        else {
+          //person.reply("Files Here \n "+files.toString())
+          resolve(files);
+        }
+      });
+    });
+  };
+
 sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             kingcmd: "help",
             shortcut: ["menu"],
-            infocmd: "Help list",
+            desc: "Help list",
             kingclass: "general",
             react: "✨",
             filename: __filename
         },
-        async(Void, citel, text) => {
+        async(bot, person, text) => {
             const { commands } = require('../lib');
             if (text.split(" ")[0]) {
-                let arr = [];
+                let Maher = [];
                 const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
-                if (!cmd) return await citel.reply("*❌No Such commands.*");
-                else arr.push(`*🍁Command:* ${cmd.kingcmd}`);
-                if (cmd.kingclass) arr.push(`*🧩kingclass:* ${cmd.kingclass}`);
-                if (cmd.shortcut) arr.push(`*🧩shortcut:* ${cmd.shortcut}`);
-                if (cmd.infocmd) arr.push(`*🧩infocmdription:* ${cmd.infocmd}`);
-                if (cmd.use) arr.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.kingcmd} ${cmd.use}\`\`\``);
-                return await citel.reply(arr.join('\n'));
+                if (!cmd) return await person.reply("*❌No Such commands.*");
+                else Maher.push(`*🍁Command:* ${cmd.kingcmd}`);
+                if (cmd.kingclass) Maher.push(`*🧩Category:* ${cmd.kingclass}`);
+                if (cmd.shortcut) Maher.push(`*🧩Alias:* ${cmd.shortcut}`);
+                if (cmd.desc) Maher.push(`*🧩Description:* ${cmd.desc}`);
+                if (cmd.use) Maher.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.kingcmd} ${cmd.use}\`\`\``);
+                return await person.reply(Maher.join('\n'));
             } else {
                 const cmds = {}
                 commands.map(async(command, index) => {
@@ -56,7 +106,7 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
                 let str = `╭────《 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 》─────⊷\n`
                 str +=
                     '```' + `│ ╭──────────────◆
-│ │ User:- ${citel.pushName}
+│ │ User:- ${person.pushName}
 │ │ Theme:- ${tlang().title}
 │ │ Prefix:- [ ${prefix} ]
 │ │ Owner:- ${Config.ownername}
@@ -87,96 +137,44 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
                     image: { url: await botpic() },
                     caption: str
                 };
-                return await Void.sendMessage(citel.chat, buttonMessaged);
+                return await bot.sendMessage(person.chat, buttonMessaged);
             }
         }
     )
-    //---------------------------------------------------------------------------
-sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
-            kingcmd: "list",
-            infocmd: "list menu",
-            kingclass: "general"
-        },
-        async(Void, citel) => {
-            const { commands } = require('../lib');
-            let str = `
-╭━━〘 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 〙━━──⊷`
-            str += `
-┃ ⛥╭──────────────      
-┃ ⛥│ User: ${citel.pushName}
-┃ ⛥│ Theme: ${tlang().title}
-┃ ⛥│ Prefix: ${prefix}
-┃ ⛥│ Owner: ${Config.ownername}
-┃ ⛥│ Commands: ${commands.length}
-┃ ⛥│ Uptime: ${runtime(process.uptime())}
-┃ ⛥│ Mem: ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-┃ ⛥│  
-┃ ⛥╰───────────
-╰━━━━━━━━━━━──⊷\n`
-for (let i = 0; i < commands.length; i++) 
-{
-     if(commands[i].kingcmd==undefined) continue
-     str +=       `╭ ${i+1} *${fancytext(commands[i].kingcmd,1)}*\n` 
-     if(commands[i].infocmd=undefined) commands[i].infocmd=""
-     str += `╰➛ ${fancytext(commands[i].infocmd,1)}\n`
-}
-            return await Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: str })
-        }
-    )
-    //---------------------------------------------------------------------------
-sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
-        kingcmd: "owner",
-        infocmd: "To find owner number",
-        kingclass: "general",
-        react: "💜",
-        filename: __filename
-    },
-    async(Void, citel) => {
-        const Config = require('../config')
-        const vcard = 'BEGIN:VCARD\n' +
-            'VERSION:3.0\n' +
-            'FN:' + Config.ownername + '\n' +
-            'ORG:;\n' +
-            'TEL;type=CELL;type=VOICE;waid=' + owner[0] + ':+' + owner[0] + '\n' +
-            'END:VCARD'
-        let buttonMessaged = {
-            contacts: { displayName: Config.ownername, contacts: [{ vcard }] },
-            contextInfo: {
-                externalAdReply: {
-                    title: Config.ownername,
-                    body: 'Touch here.',
-                    renderLargerThumbnail: true,
-                    thumbnailUrl: ``,
-                    thumbnail: log0,
-                    mediaType: 2,
-                    mediaUrl: '',
-                    sourceUrl: `https://wa.me/+` + owner[0] + '?text=Hii bro,I am ' + citel.pushName,
-                },
-            },
-        };
-        return await Void.sendMessage(citel.chat, buttonMessaged, {
-            quoted: citel,
-        });
-
-    }
-)
-
+  
 sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
     kingcmd: "file",
     infocmd: "to get extact name where that command is in repo.\nSo user can edit that.",
     kingclass: "general",
-    react: "✨",
-    filename: __filename
+
 },
-async(Void, citel, text) => {
- const { commands } = require('../lib');
- let arr = [];
-        const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
-        if (!cmd) return await citel.reply("*❌No Such commands.*");
-        else arr.push(`*🍁Command:* ${cmd.kingcmd}`);
-        if (cmd.kingclass) arr.push(`*🧩Type:* ${cmd.kingclass}`);
-        if(cmd.filename) arr.push(`✨FileName: ${cmd.filename}`)
-        return citel.reply(arr.join('\n'));
+ async(bot, person, text ,{isCreator }) => {
+   if(!isCreator) return person.reply("ᴏɴʟʏ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ")
+   if(!text) return person.reply("ᴘʟᴇᴀsᴇ, ᴘʀᴏᴠɪᴅᴇ ᴍᴇ ᴀ ᴄᴏᴍᴍᴀɴᴅ/ᴅɪʀᴇᴄᴛᴏʀʏ")
+   if(text.startsWith("."))
+   {
+      let res="------------- FILE MANAGER -------------\n"
+      try {
+            const sɪᴛʜᴜ_files = await readDirectory(text);
+            files.forEach(sɪᴛʜᴜ_file => { res += file + '\n'; });
+            await person.reply(res.toString());
+      } catch (error) {  person.reply(error); }
+        return;
+   }
+   
+   
+   const { commands } = require('../lib');
+   
+   let Maher = [];
+          const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
+          if (!cmd) return await person.reply("ɴᴏ sᴜᴄʜ ᴄᴏᴍᴍᴀɴᴅs");
+          else Maher.push(`┏━━⟪⟪ ${mztit} ⟫━⦿\n┃⛯ •ᴄᴏᴍᴍᴀɴᴅ• ${cmd.kingcmd}`);
+          if (cmd.kingclass) Maher.push(`┃⛯ •ᴄʟᴀss• ${cmd.kingclass}`);
+          if(cmd.kingpath) Maher.push(`┃⛯) •ꜰɪʟᴇ-ᴘᴀᴛʜ• ${cmd.kingpath}\n┗━━━━━━━━━━⦿\n${name.caption}`)
+          return await person.reply(Maher.join('\n'));
+  
 
 
-})
+  })
+
+
