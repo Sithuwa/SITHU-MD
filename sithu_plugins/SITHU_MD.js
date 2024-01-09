@@ -78,7 +78,8 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             filename: __filename
         },
         async(bot, person, text) => {
-            const { commands } = require('../lib');
+   if(text.startsWith("."))
+               const { commands } = require('../lib');
             if (text.split(" ")[0]) {
                 let Maher = [];
                 const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
