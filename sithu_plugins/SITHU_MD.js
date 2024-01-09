@@ -112,7 +112,6 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
 │ │ Owner:- ${Config.ownername}
 │ │ Users:- ${total}
 │ │ Uptime:- ${runtime(process.uptime())}
-│ │ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
 │ │ Time:- ${time}
 │ │ Date:- ${date}
 │ ╰──────────────◆
