@@ -78,8 +78,7 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             filename: __filename
         },
         async(bot, person, text) => {
-   if(text.startsWith("."))
-               const { commands } = require('../lib');
+            const { commands } = require('../lib');
             if (text.split(" ")[0]) {
                 let Maher = [];
                 const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
@@ -104,14 +103,13 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
                     .locale('id')
                 const date = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 let total = await sck1.countDocuments()
-                let str = `╭────《 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 》─────⊷\n`
+                let str = `╭────《 ${mztit} 》─────⊷\n`
                 str +=
                     '```' + `│ ╭──────────────◆
 │ │ User:- ${person.pushName}
 │ │ Theme:- ${tlang().title}
 │ │ Prefix:- [ ${prefix} ]
 │ │ Owner:- ${Config.ownername}
-│ │ Plugins:- ${commands.length}
 │ │ Users:- ${total}
 │ │ Uptime:- ${runtime(process.uptime())}
 │ │ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
