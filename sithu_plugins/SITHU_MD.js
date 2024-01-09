@@ -79,7 +79,7 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
         },
         async(bot, person, text) => {
             const { commands } = require('../lib');
-               if(text.startsWith("."))
+            if (text.split(" ")[0]) {
                 let Maher = [];
                 const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
                 if (!cmd) return await person.reply("*❌No Such commands.*");
