@@ -81,7 +81,7 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             const { commands } = require('../lib');
             if (text.split(" ")[0]) {
                 let Maher = [];
-                const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
+                const cmd = commands.find((cmd) => cmd.pattern === (text.split(" ")[0].toLowerCase()))
                 if (!cmd) return await person.reply("*❌No Such commands.*");
                 else Maher.push(`*🍁Command:* ${cmd.kingcmd}`);
                 if (cmd.kingclass) Maher.push(`*🧩Category:* ${cmd.kingclass}`);
