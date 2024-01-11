@@ -82,11 +82,11 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             if (text.split(" ")[0]) {
                 let Maher = [];
                 const cmd = commands.find((cmd) => cmd.pattern === (text.split(" ")[0].toLowerCase()))
-                if (!cmd) return await person.reply("*❌No Such commands.*");
+                if (!cmd) return await person.reply("ɴᴏ sᴜᴄʜ ᴄᴏᴍᴍᴀɴᴅs");
+                else Maher.push(`⛯ •ᴄᴏᴍᴍᴀɴᴅ• ${cmd.kingcmd}`);
                 if (cmd.kingclass) Maher.push(`*🧩Category:* ${cmd.kingclass}`);
                 if (cmd.shortcut) Maher.push(`*🧩Alias:* ${cmd.shortcut}`);
                 if (cmd.desc) Maher.push(`*🧩Description:* ${cmd.desc}`);
-                if (cmd.use) Maher.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.kingcmd} ${cmd.use}\`\`\``);
                 return await person.reply(Maher.join('\n'));
             } else {
                 const cmds = {}
