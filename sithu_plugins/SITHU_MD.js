@@ -82,8 +82,6 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             if (text.split(" ")[0]) {
                 let Maher = [];
                 const cmd = commands.find((cmd) => cmd.pattern === (text.split(" ")[0].toLowerCase()))
-                if (!cmd) return await person.reply("*❌No Such commands.*");
-                else Maher.push(`*🍁Command:* ${cmd.kingcmd}`);
                 if (cmd.kingclass) Maher.push(`*🧩Category:* ${cmd.kingclass}`);
                 if (cmd.shortcut) Maher.push(`*🧩Alias:* ${cmd.shortcut}`);
                 if (cmd.desc) Maher.push(`*🧩Description:* ${cmd.desc}`);
