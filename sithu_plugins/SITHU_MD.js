@@ -171,7 +171,7 @@ for (let i = 0; i < commands.length; i++)
      if(commands[i].infocmd=undefined) commands[i].infocmd=""
      str += `╰➛ ${fancytext(commands[i].infocmd,1)}\n`
 }
-            return await bot.sendMessage(person.chat, { image: { global.THUMB_IMAGE }, caption: str })
+            return await bot.sendMessage(person.chat, { image: { url: THUMB_IMAGE }, caption: str })
         }
     )
   
