@@ -26,6 +26,7 @@
           kingcmd: "ownner",
           infocmd: "to check owner number",
           kingclass: "general",
+          react: "👨‍💻",
 
       },
       async(bot, person) => {
@@ -148,6 +149,7 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             kingcmd: "list",
             infocmd: "list menu",
             kingclass: "general"
+            react: "📦",
         },
         async(bot, person) => {
             const { commands } = require('../lib');
