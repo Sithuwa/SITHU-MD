@@ -78,18 +78,18 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             react: "✨",
             filename: __filename
         },
-        async(Void, citel, text) => {
+        async(bot, person, text) => {
             const { commands } = require('../lib');
             if (text.split(" ")[0]) {
-                let arr = [];
+                let Maher = [];
                 const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
-                if (!cmd) return await citel.reply("*❌No Such commands.*");
+                if (!cmd) return await person.reply("*❌No Such commands.*");
                 else arr.push(`*🍁Command:* ${cmd.kingcmd}`);
                 if (cmd.kingclass) arr.push(`*🧩Category:* ${cmd.kingclass}`);
                 if (cmd.shortcut) arr.push(`*🧩Alias:* ${cmd.shortcut}`);
                 if (cmd.infocmd) arr.push(`*🧩Description:* ${cmd.infocmd}`);
                 if (cmd.use) arr.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.kingcmd} ${cmd.use}\`\`\``);
-                return await citel.reply(arr.join('\n'));
+                return await person.reply(arr.join('\n'));
             } else {
                 const cmds = {}
                 commands.map(async(command, index) => {
@@ -107,7 +107,7 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
                 let str = `╭────《 ${mztit} 》─────⊷\n`
                 str +=
                     '```' + `│ ╭──────────────◆
-│ │ User:- ${citel.pushName}
+│ │ User:- ${person.pushName}
 │ │ Theme:- ${tlang().title}
 │ │ Prefix:- [ ${prefix} ]
 │ │ Owner:- ${Config.ownername}
@@ -138,7 +138,7 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
                     image: { url: await botpic() },
                     caption: str
                 };
-                return await Void.sendMessage(citel.chat, buttonMessaged);
+                return await bot.sendMessage(person.chat, buttonMessaged);
             }
         }
     )
@@ -148,13 +148,13 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             infocmd: "list menu",
             kingclass: "general"
         },
-        async(Void, citel) => {
+        async(bot, person) => {
             const { commands } = require('../lib');
             let str = `
 ╭━━〘 ${mztit} 〙━━──⊷`
             str += `
 ┃ ⛥╭──────────────      
-┃ ⛥│ User: ${citel.pushName}
+┃ ⛥│ User: ${person.pushName}
 ┃ ⛥│ Theme: ${tlang().title}
 ┃ ⛥│ Prefix: ${prefix}
 ┃ ⛥│ Owner: ${Config.ownername}
@@ -171,7 +171,7 @@ for (let i = 0; i < commands.length; i++)
      if(commands[i].infocmd=undefined) commands[i].infocmd=""
      str += `╰➛ ${fancytext(commands[i].infocmd,1)}\n`
 }
-            return await Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: str })
+            return await bot.sendMessage(person.chat, { image: { url: THUMB_IMAGE }, caption: str })
         }
     )
   
