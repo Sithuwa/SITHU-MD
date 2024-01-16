@@ -75,21 +75,25 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             shortcut: ["menu","sithu","සිතූ"],
             infocmd: "Help list",
             kingclass: "general",
-            react: "✨",
+            react: "🧙‍♂️",
             filename: __filename
         },
         async(bot, person, text) => {
+                await Void.sendPresenceUpdate('recording', citel.chat);
+            await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/Sithuwa/SITHUWA-MD/raw/main/media/bot.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
+        }
+    )
             const { commands } = require('../lib');
             if (text.split(" ")[0]) {
                 let Maher = [];
                 const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
                 if (!cmd) return await person.reply("*❌No Such commands.*");
-                else arr.push(`*🍁Command:* ${cmd.kingcmd}`);
-                if (cmd.kingclass) arr.push(`*🧩Category:* ${cmd.kingclass}`);
-                if (cmd.shortcut) arr.push(`*🧩Alias:* ${cmd.shortcut}`);
-                if (cmd.infocmd) arr.push(`*🧩Description:* ${cmd.infocmd}`);
-                if (cmd.use) arr.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.kingcmd} ${cmd.use}\`\`\``);
-                return await person.reply(arr.join('\n'));
+                else Maher.push(`*🍁Command:* ${cmd.kingcmd}`);
+                if (cmd.kingclass) Maher.push(`*🧩Category:* ${cmd.kingclass}`);
+                if (cmd.shortcut) Maher.push(`*🧩Alias:* ${cmd.shortcut}`);
+                if (cmd.infocmd) Maher.push(`*🧩Description:* ${cmd.infocmd}`);
+                if (cmd.use) Maher.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.kingcmd} ${cmd.use}\`\`\``);
+                return await person.reply(Maher.join('\n'));
             } else {
                 const cmds = {}
                 commands.map(async(command, index) => {
@@ -209,5 +213,4 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
 
 
   })
-
 
