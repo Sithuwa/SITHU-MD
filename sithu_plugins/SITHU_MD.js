@@ -79,7 +79,7 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             filename: __filename
         },
           async(bot, person, text) => {
-                        await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/Kalhara254/VOICE/raw/main/media/Menu.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
+                        await bot.sendMessage(person.chat, { audio: {url : 'https://github.com/Kalhara254/VOICE/raw/main/media/Menu.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: person, });
             const { commands } = require('../lib');
             if (text.split(" ")[0]) {
                 let Maher = [];
