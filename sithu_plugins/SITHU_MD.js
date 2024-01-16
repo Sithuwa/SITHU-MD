@@ -148,7 +148,7 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
 sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             kingcmd: "list",
             infocmd: "list menu",
-            kingclass: "general"
+            kingclass: "general",
             react: "📦",
         },
         async(bot, person) => {
