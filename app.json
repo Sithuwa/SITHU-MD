@@ -1,7 +1,7 @@
 {
   "name": "SITHU-MD WHATSAPP BOT",
   "description": "A Whatsapp Bot With Most Premium Features Makes Your Whatsapp Premium. For Any Help See My YT:https://www.youtube.com/@SITHUWA-MD",
-  "logo": "https://telegra.ph/file/f9e51e5d61e439020720a.jpg",
+  "logo": "https://telegra.ph/file/4ba85b752de56b77264c5.jpg",
   "keywords": ["nodejs", "bot", "whatsapp bot", "SITHU_MD", "SITHU_BOT", "SITHU","SITHUWA_MD","Multi-Device-Bot","multi device"],
   "success_url": "/",
   "stack": "container",
@@ -12,7 +12,7 @@
   },
    "THUMB_IMAGE": {
     "description": "THUMBNAIL Image for bot.",
-     "value": "https://telegra.ph/file/f9e51e5d61e439020720a.jpg"
+     "value": "https://telegra.ph/file/32210876ea64c8ec80bd4.jpg"
     },
  "HEROKU_API_KEY": {
     "description": "Put Your Heroku Api Key Here",
@@ -119,7 +119,7 @@
 },
 "WAURL": {
   "description": "Add Your Group Link.You Can See IT IN Most Commands",
-   "value": "https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi",
+   "value": "https://chat.whatsapp.com/GU73HsSG2kXCd8EN9xQtiF",
     "required": false
 },
 "BOT_NAME": {
