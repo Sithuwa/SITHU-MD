@@ -8,9 +8,9 @@ global.mongodb = process.env.MONGODB_URI || "mongodb+srv://SithumKalhara:97531@c
 global.port=5000  ;
 global.audio = '' ; 
 global.video = '' ;
-global.blockJids = process.env.BLOCK_JID ||'120363169665426586@g.us' ;
-global.allowJids = process.env.ALLOW_JID ||'120363169665426586@g.us' ;
-global.email = 'HELP_SIGMA-MD@outlook.com' ; 
+global.blockJids = process.env.BLOCK_JID ||'120363221057889216@g.us' ;
+global.allowJids = process.env.ALLOW_JID ||'94759333625@s.whatsapp.net' ;
+global.email = 'sithumkalhara271@gmail.com' ; 
 global.github = 'https://github.com/Sithuwa/SITHU-MD' ;
 global.location = 'Ampara' ;
 global.timezone  = process.env.TIME_ZONE || 'Asia/Colombo' //add correct timezone or leave it same , otherwise you get erros
@@ -20,9 +20,9 @@ global.devs = "94761516805"; //Dont change it From here
 global.mztit = process.env.SKTIT ||"💛SITHUWA💛", // add your title here
 global.Gname = process.env.GNAME ||"sɪᴛʜᴜ-ᴍᴅ-sᴜᴘᴘᴏʀᴛ",
 global.zyt = process.env.ZYT || 'https://www.youtube.com/@SITHUWA-MD',
-global.waUrl = process.env.WAURL ||"https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi",
+global.waUrl = process.env.WAURL ||"https://chat.whatsapp.com/GU73HsSG2kXCd8EN9xQtiF",
 global.website = 'https://github.com/Sithuwa/SITHU-MD' ; 
-global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://telegra.ph/file/f9e51e5d61e439020720a.jpg' ;
+global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://telegra.ph/file/4ba85b752de56b77264c5.jpg' ;
 module.exports = {
   sessionName: process.env.SESSION_ID || '',      //Put Your Session Id Here
   botname: process.env.BOT_NAME || 'sɪᴛʜᴜ_ᴍᴅ',  // add the botname you want
