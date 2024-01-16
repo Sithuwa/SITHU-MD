@@ -41,7 +41,7 @@ Module_Exports({
     {
       //  let zx = text.length;
         //if (zx < 300) {
-            let {data} = await axios.get(`http://api.brainshop.ai/get?bid=177396&key=5sivBl67scSVFCyo&uid=[${citel.sender.split("@")[0]}]&msg=[${text}]`);
+            let {data} = await axios.get(`http://api.brainshop.ai/get?bid=179995&key=WBUunWm0XQLuqrAR&uid=[${citel.sender.split("@")[0]}]&msg=[${text}]`);
             return citel.reply(data.cnt);  
   
     }
