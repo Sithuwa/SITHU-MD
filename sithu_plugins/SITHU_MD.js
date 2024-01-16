@@ -72,7 +72,7 @@
     //---------------------------------------------------------------------------
 sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             kingcmd: "help",
-            shortcut: ["menu"],
+            shortcut: ["menu","sithu","සිතූ"],
             infocmd: "Help list",
             kingclass: "general",
             react: "✨",
@@ -143,37 +143,6 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
         }
     )
     //---------------------------------------------------------------------------
-sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
-            kingcmd: "list",
-            infocmd: "list menu",
-            kingclass: "general"
-        },
-        async(bot, person) => {
-            const { commands } = require('../lib');
-            let str = `
-╭━━〘 ${mztit} 〙━━──⊷`
-            str += `
-┃ ⛥╭──────────────      
-┃ ⛥│ User: ${person.pushName}
-┃ ⛥│ Theme: ${tlang().title}
-┃ ⛥│ Prefix: ${prefix}
-┃ ⛥│ Owner: ${name.ownername}
-┃ ⛥│ Commands: ${commands.length}
-┃ ⛥│ Uptime: ${runtime(process.uptime())}
-┃ ⛥│ Mem: ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-┃ ⛥│  
-┃ ⛥╰───────────
-╰━━━━━━━━━━━──⊷\n`
-for (let i = 0; i < commands.length; i++) 
-{
-     if(commands[i].kingcmd==undefined) continue
-     str +=       `╭ ${i+1} *${fancytext(commands[i].kingcmd,1)}*\n` 
-     if(commands[i].infocmd=undefined) commands[i].infocmd=""
-     str += `╰➛ ${fancytext(commands[i].infocmd,1)}\n`
-}
-            return await bot.sendMessage(person.chat, { image: { url: THUMB_IMAGE }, caption: str })
-        }
-    )
   
 sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
     kingcmd: "file",
