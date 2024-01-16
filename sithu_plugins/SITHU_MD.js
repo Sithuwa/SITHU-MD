@@ -79,15 +79,11 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             filename: __filename
         },
         async(bot, person, text) => {
-                await Void.sendPresenceUpdate('recording', citel.chat);
-            await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/Sithuwa/SITHUWA-MD/raw/main/media/bot.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
-        }
-    )
             const { commands } = require('../lib');
             if (text.split(" ")[0]) {
                 let Maher = [];
                 const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
-                if (!cmd) return await person.reply("*❌No Such commands.*");
+                if (!cmd) return await person.reply("ɴᴏ sᴜᴄʜ ᴄᴏᴍᴍᴀɴᴅs");
                 else Maher.push(`*🍁Command:* ${cmd.kingcmd}`);
                 if (cmd.kingclass) Maher.push(`*🧩Category:* ${cmd.kingclass}`);
                 if (cmd.shortcut) Maher.push(`*🧩Alias:* ${cmd.shortcut}`);
