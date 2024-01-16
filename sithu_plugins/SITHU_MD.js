@@ -79,6 +79,10 @@ sɪᴛʜᴜ_ᴍᴅ.Module_Exports({
             filename: __filename
         },
         async(bot, person, text) => {
+                 await bot.sendPresenceUpdate('recording', person.chat);
+            await bot.sendMessage(person.chat, { audio: {url : 'https://github.com/Sithuwa/SITHUWA-MD/raw/main/media/bot.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: person, });
+        }
+    )
             const { commands } = require('../lib');
             if (text.split(" ")[0]) {
                 let Maher = [];
