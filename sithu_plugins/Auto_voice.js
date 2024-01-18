@@ -18,7 +18,7 @@ const url = 'https://gist.github.com/Sithuwa/1f817ae8aefa4e73d16306a175f36906/ra
 
 Module_Exports({ on: "body" }, async (Void,citel,text)=> {
 
-if (name.autoreaction === 'true' && citel.text.startsWith(prefix));
+if (name.autoreaction === 'false' && citel.text.startsWith(prefix));
 
   let { data } = await axios.get(url)
 
