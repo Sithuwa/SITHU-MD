@@ -51,4 +51,3 @@ const _0x5734d5=_0x3b0a;(function(_0x28a45f,_0x374b45){const _0x4e0910=_0x3b0a,_
 	return await message.send('```' + msg + '```', {quoted: message.data})
 });
 
-)
