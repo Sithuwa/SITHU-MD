@@ -58,6 +58,10 @@
       "value": "false",
      "required" :false
     },
+"AUTO_VOICE": {
+    "description": "Auto Voice reply යන්න ඕන නම් true දෙන්න ඕනෙ නැත්තම් false දෙන්න",
+     "value": "false"
+    },
       "PREFIX": {
   "description": "Enter your desired prefix for bot.",
       "value": "."
@@ -81,7 +85,7 @@
   },
   "MONGODB_URI": {
     "description": "Add Your Own, If you have key. Its a secret String for Mongodb Connection",
-     "value": "mongodb+srv://SithumKalhara:97531@cluster0.iva7dbo.mongodb.net/?retryWrites=true&w=majority"
+     "value": "mongodb+srv://SithumKalhara:97531@cluster0.wclgxxb.mongodb.net/?retryWrites=true&w=majority"
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
