@@ -9,25 +9,25 @@ const axios = require('axios')
         infocmd: "Finds info number",
         
     },
-  async (message, match) => {
-    match =
-      (message.mention[0] && jidToNum(message.mention[0])) ||
-      match ||
-      (message.reply_message && jidToNum(message.reply_message.jid))
-    if (!match) return await message.send(`*Example :* truecaller 919876543210`)
-    if (match === 'token') {
+  async (citel, text) => {
+    text =
+      (citel.mention[0] && jidToNum(citel.mention[0])) ||
+      text ||
+      (citel.reply_message && jidToNum(citel.reply_message.jid))
+    if (!text) return await citel.send(`*Example :* truecaller 919876543210`)
+    if (text === 'token') {
       const token = await getTruecaller()
-      if (!token) return await message.send(`*Your not logined*`)
-      return await message.send(token, { quoted: message.quoted })
+      if (!token) return await citel.send(`*Your not logined*`)
+      return await citel.send(token, { quoted: citel.quoted })
     }
-    if (match === 'logout') {
+    if (text === 'logout') {
       await delTruecaller()
-      return await message.send(`Logged out from Truecaller.`)
+      return await citel.send(`Logged out from Truecaller.`)
     }
-    const res = await truecaller.search(match)
+    const res = await truecaller.search(text)
 
     if (res.message) {
-      return await message.send(res.message)
+      return await citel.send(res.message)
     }
     let msg = ''
     if (res.name) msg += `*Name :* ${res.name}\n`
@@ -38,6 +38,6 @@ const axios = require('axios')
     msg += `*Number :* ${res.number}\n`
     if (res.city) msg += `*City :* ${res.city}\n`
     msg += `*DailingCode :* ${res.dialingCode}(${res.countryCode})`
-    await message.send(msg)
+    await citel.send(msg)
   }
 )
