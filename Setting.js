@@ -35,6 +35,7 @@ module.exports = {
   alwaysonline: process.env.ALWAYS_ONLINE || 'true', // it will show always online, false it if you dont want
   antifake :   process.env.FAKE_COUNTRY_CODE ||'212',
   readmessage: process.env.READ_MESSAGE || 'true', // it will read all your messages, false it if you dont want
+  autovoice: process.env.AUTO_VOICE || 'false',
   HANDLERS: process.env.PREFIX || '.',
   warncount : process.env.WARN_COUNT || 2,
   disablepm: process.env.DISABLE_PM || "false", // if true it will disable your pm
