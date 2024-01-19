@@ -1,4 +1,4 @@
-const { truecaller, jidToNum, delTruecaller, getTruecaller, Module_Exports } = require('../lib')
+const { truecaller, Module_Exports } = require('../lib')
 
 const axios = require('axios')
  
@@ -10,34 +10,22 @@ const axios = require('axios')
         
     },
   async (Void, citel, text) => {
-    text =
-      (citel.mention[0] && jidToNum(citel.mention[0])) ||
-      text ||
-      (citel.reply_message && jidToNum(citel.reply_message.jid))
-    if (!text) return await citel.send(`*Example :* truecaller 919876543210`)
-    if (text === 'token') {
-      const token = await getTruecaller()
-      if (!token) return await citel.send(`*Your not logined*`)
-      return await citel.send(token, { quoted: citel.quoted })
-    }
-    if (text === 'logout') {
-      await delTruecaller()
-      return await citel.send(`Logged out from Truecaller.`)
-    }
-    const res = await truecaller.search(text)
+if (!text[1] && !citel.reply_message) return await citel.reply("_Give me any number or reply to any user!_");
+if (text[1].includes('/')) return await citel.sendReply('Wrong format! \n\n .true +91 6282344739')
+var go;
+if (citel.reply_message) go = citel.reply_message.jid.split('@')[0]
+else if (!text[1].includes('@')) go = text[1]
+else if (citel.mention) {
+var mm = '';
+citel.mention.map(async (user) => {
+mm += user.split('@')[0];
+});
+go = mm
+} 
+var initt = go.split(" ").join("")
+var number = initt.replace('+','')
+var res = await find(number,'',citel.client.user.id)
+if (res == 'error') return await citel.sendReply("_Truecaller limit over! (20/20) Contact owner_")
+await citel.sendReply(res);});
 
-    if (res.message) {
-      return await citel.send(res.message)
-    }
-    let msg = ''
-    if (res.name) msg += `*Name :* ${res.name}\n`
-    if (res.gender) msg += `*Gender :* ${res.gender}\n`
-    if (res.email) msg += `*Email :* ${res.email}\n`
-    msg += `*Type :* ${res.numberType}(${res.type})\n`
-    msg += `*Carrier :* ${res.carrier}\n`
-    msg += `*Number :* ${res.number}\n`
-    if (res.city) msg += `*City :* ${res.city}\n`
-    msg += `*DailingCode :* ${res.dialingCode}(${res.countryCode})`
-    await citel.send(msg)
-  }
-)
+
