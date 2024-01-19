@@ -1,6 +1,4 @@
-const { truecaller, Module_Exports } = require('../lib')
-
-const {find} = require('raganork-bot')
+const { truecaller, find, Module_Exports } = require('../lib')
 
 const axios = require('axios')
  
