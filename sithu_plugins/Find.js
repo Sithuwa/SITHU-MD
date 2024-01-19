@@ -9,7 +9,7 @@ const axios = require('axios')
         infocmd: "Finds info number",
         
     },
-  async (citel, text) => {
+  async (Void, citel, text) => {
     text =
       (citel.mention[0] && jidToNum(citel.mention[0])) ||
       text ||
