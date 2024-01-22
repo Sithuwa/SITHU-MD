@@ -1,10 +1,8 @@
 const { tlang, ringtone, cmd,fetchJson, sleep, botpic,ffmpeg, getBuffer, pinterest, prefix, Config } = require('../lib')
-const { mediafire } = require("../lib/mediafire.js");
-const googleTTS = require("google-tts-api");
-const ytdl = require('ytdl-secktor')
-const fs = require('fs-extra')
-var videotime = 60000 // 1000 min
-var dlsize = 1000 // 1000mb
+const long = String.fromCharCode(8206)
+  const sɪᴛʜᴜ_readmore = long.repeat(4001)
+  const sɪᴛʜᴜ_speed = require('performance-now')
+  const sɪᴛʜᴜ_ᴍᴅ = require('../lib/sithu_plugins')
 //---------------------------------------------------------------------------
 
 Module_Exports({ 
