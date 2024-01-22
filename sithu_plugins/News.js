@@ -2,7 +2,7 @@ const moment = require('moment-timezone')
  const {fetchJson,Module_Exports, tlang } = require('../lib') 
  let gis = require("async-g-i-s"); 
  const axios = require('axios')
- const fetch = require('node-fetch') 
+ let fetch = require('node-fetch') 
  const Esana = require('@sl-code-lords/esana-news') 
  var api = new Esana() 
 
