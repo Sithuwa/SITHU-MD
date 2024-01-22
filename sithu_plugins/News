@@ -1,8 +1,10 @@
-const fs = require('fs-extra')
+ const moment = require('moment-timezone') 
  const {fetchJson,Module_Exports, tlang } = require('../lib') 
+ let gis = require("async-g-i-s"); 
  const axios = require('axios')
- let fetch = require('node-fetch')
- 
+ const fetch = require('node-fetch') 
+ const Esana = require('@sl-code-lords/esana-news') 
+ var api = new Esana() 
 
 //---------------------------------------------------------------------------
 Module_Exports({   
@@ -117,6 +119,4 @@ Module_Exports({
    catch(e){   
    console.log(e)   
    }})
-
-//---------------------------------------------------------------------------
 
