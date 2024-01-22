@@ -38,7 +38,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/b10172f9cfdbe5f43c43e.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
@@ -50,16 +50,16 @@ Module_Exports({
 ⌛ *OWNER* SITHUM KUMARA
 ⌛ *No* https://wa.me/94761516805
         
-➥1.1 *ᴅᴏᴡɴʟᴏᴅᴇʀ ᴍᴇɴᴜ*
-➥1.2 *ᴍɪꜱᴄ ᴍᴇɴᴜ*
-➥1.3 *ꜱᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ*
-➥1.4 *ɢʀᴏᴜᴘ ᴍᴇɴᴜ*
-➥1.5 *ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ*
-➥1.6 *ɴᴇᴡꜱ ᴍᴇɴᴜ*
-➥1.7 *ɢᴇɴᴇʀᴀʟ ᴍᴇɴᴜ*
-➥1.8 *ᴄᴏɴᴠᴇʀᴛᴏʀ ᴍᴇɴᴜ*
-➥1.9 *ᴏᴡɴᴇʀ ᴍᴇɴᴜ*
-➥1.10 *ᴏᴛʜᴇʀ ᴍᴇɴᴜ*
+➥${prefix}1.1 *ᴅᴏᴡɴʟᴏᴅᴇʀ ᴍᴇɴᴜ*
+➥${prefix}1.2 *ᴍɪꜱᴄ ᴍᴇɴᴜ*
+➥${prefix}1.3 *ꜱᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ*
+➥${prefix}1.4 *ɢʀᴏᴜᴘ ᴍᴇɴᴜ*
+➥${prefix}1.5 *ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ*
+➥${prefix}1.6 *ɴᴇᴡꜱ ᴍᴇɴᴜ*
+➥${prefix}1.7 *ɢᴇɴᴇʀᴀʟ ᴍᴇɴᴜ*
+➥${prefix}1.8 *ᴄᴏɴᴠᴇʀᴛᴏʀ ᴍᴇɴᴜ*
+➥${prefix}1.9 *ᴏᴡɴᴇʀ ᴍᴇɴᴜ*
+➥${prefix}1.10 *ᴏᴛʜᴇʀ ᴍᴇɴᴜ*
 
 🍀 *ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ* 🍀
 🇱🇰 *ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱɪᴛʜᴜᴍ ᴋᴜᴍᴀʀᴀ* 🇱🇰
@@ -106,7 +106,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/1f4974fdf4f606de19cc2.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
@@ -180,7 +180,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/a8b1e9e3c30514856a1bb.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
@@ -241,7 +241,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/a62f98c5c028c833eb264.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
@@ -314,7 +314,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/c44a10ae3a365e9b298a0.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
@@ -385,7 +385,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/a4bcf9c5c49c190f489bb.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
@@ -455,7 +455,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/537223a9c40ed18964c1a.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
@@ -514,7 +514,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/eb6df3480822809fd1fe4.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
@@ -582,7 +582,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/5780192ad9e3f02d02d59.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
@@ -647,7 +647,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/e4cc4cdd33eb8e37b03ef.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
@@ -709,7 +709,7 @@ Module_Exports({
             ];
             let buttonMessage = {
                 image: {
-                    url: 'https://telegra.ph/file/e2c140df787d603632e7f.jpg',
+                url: await botpic(),
                 },
 
                 caption: `
