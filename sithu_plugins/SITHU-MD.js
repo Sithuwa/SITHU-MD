@@ -252,7 +252,7 @@ Module_Exports({
 ⌛ *OWNER* SITHUM KUMARA
 ⌛ *No* https://wa.me/94761516805
 
-str += `┏┅┅❨ *${kingcmd.sticker}* ❩┅┅☉\n` ;
+str += `┏┅┅❨ *${kingclass.sticker}* ❩┅┅☉\n` ;
                    if(text.toLowerCase() == kingclass.toLowerCase()){ str += `│ ${fancytext(plugins,1)}\n` ; }
                         str += `┗┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅⊷\n`  ;
 🍀 *ꜱɪᴛʜᴜᴡᴀ-ᴍᴅ* 🍀
