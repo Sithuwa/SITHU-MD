@@ -46,6 +46,7 @@
                     "koyeb-api-client": "latest",
                     "mailist": "^1.0.3",
                     "moment-timezone": "^0.5.34",
+                    "sirasa-news": "latest",
                     "mongoose": "^6.2.1",
                     "mumaker": "^2.0.0",
                     "node-cron": "^3.0.0",
