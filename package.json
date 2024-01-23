@@ -65,6 +65,8 @@
                     "translatte": "^3.0.1",
                     "util": "^0.12.4",
                     "wa-sticker-formatter": "^4.3.2",
+                    "youtubedl-core": "^4.11.4",
+                    "youtube-yts": "^2.0.0",
                     "ytdl-core": "^4.11.5",
                     "ytdl-secktor": "latest",
                     "ytdl-secktor": "^0.0.1-development"
