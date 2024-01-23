@@ -9,7 +9,7 @@ const moment = require('moment-timezone')
 //---------------------------------------------------------------------------
 
 Module_Exports({ 
-         kingcmd: "esana", 
+         kingcmd: "esana1", 
          kingclass: "news",
          react: "📃",
          infocmd: "Searches news", 
