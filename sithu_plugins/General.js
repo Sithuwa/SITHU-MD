@@ -101,17 +101,15 @@ Module_Exports({
 },
 async(Void, citel) => {
     await Void.sendPresenceUpdate('recording', citel.chat);
-        await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/Sithuwa/SITHUWA-MD/raw/main/media/Alive.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
+        await Void.sendMessage(citel.chat, { audio: {url : 'https://github.com/Sithuwa/Voice/raw/main/Audio/Repo.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
         let { data } = await axios.get('https://api.github.com/repos/Sithuwa/SITHU-MD')
-        let cap = `Hey ${citel.pushName}\n
+        let cap = `👋Hey ${citel.pushName}\n
 *☀️ 𝐓𝐨𝐭𝐚𝐥 𝐒𝐭𝐚𝐫𝐬:* ${data.stargazers_count} stars
 *🎯 𝐅𝐨𝐫𝐤𝐬:* ${data.forks_count} forks
 *🤍 𝐑𝐞𝐩𝐨:* https://github.com/Sithuwa/SITHU-MD
-*Support Group:* https://chat.whatsapp.com/GU73HsSG2kXCd8EN9xQtiF
-*public grp:* https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi
-*youtube tt:* https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ
-*Deploy Your Own:*-
-https://dashboard.heroku.com/new?button-url=https://github.com/Sithuwa/SITHU-MD`
+*🪀 Support Grp:* https://chat.whatsapp.com/GU73HsSG2kXCd8EN9xQtiF
+*🪀 Public grp:* https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi
+*📌 Youtube tt:* https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ`
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
@@ -119,7 +117,7 @@ https://dashboard.heroku.com/new?button-url=https://github.com/Sithuwa/SITHU-MD`
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
-                    title: "Sithuwa-Repo",
+                    title: "Sithu-Repo",
                     body: "Easy to Use",
                     thumbnail: log0,
                     mediaType: 4,
