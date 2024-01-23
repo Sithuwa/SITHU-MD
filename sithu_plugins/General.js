@@ -149,11 +149,11 @@ async(sithu, person) => {
   timestampe = speed();
   latensie = speed() - timestampe;
   let ter = `
-┏━━⟪⟪ ${mztit} ⟫━⦿
+┏━━⟪ ${mztit} ⟫━⦿
 ┃⛦ *_•ᴜᴘ-ᴛɪᴍᴇ•_* ${runtime(process.uptime())}
 ┃⛦ *_•sᴘᴇᴇᴅ•_* ${latensie.toFixed(4)} ᴍs 
 ┃⛦ *_•ᴠᴇʀsɪᴏɴ•_* ${name.VERSION} 
-┃⛦ *_•ᴘᴏᴡᴇʀᴇᴅ ʙʏ•_* *_sɪᴛʜᴜ ᴹᴰ_*
+┃⛦ *_•ᴘᴏᴡᴇʀᴇᴅ ʙʏ•_* *_sɪᴛʜᴜ-ᴍᴅ_*
 ┗━━━━━━━━━━⦿
 `;
   let buttonMessaged = {
