@@ -1,5 +1,5 @@
 const name = require('../Setting')
-const { Module_Exports, sithu_pluginss } = require('../sithu_plugins')
+const { Module_Exports, sithu_plugins } = require('../sithu_plugins')
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 const {subsearch , subdl }  = require('@sl-code-lords/si-subdl')
 Module_Exports({
