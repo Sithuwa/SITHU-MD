@@ -31,8 +31,7 @@ async(Void, citel, text) => {
 `
   await Void.sendMessage(from,{image:{url: latest.results.img },caption: maru + "*ꜱɪᴛʜᴜ-ᴍᴅ ᴡʜᴀᴛꜱᴀᴘᴘ ᴜꜱᴇʀ ʙᴏᴛ*\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱɪᴛʜᴜᴍ ᴋᴀʟʜᴀʀᴀ*" },{ quoted: citel })
   await Void.sendMessage(from, { document : { url : latest.results.dl_link  }  ,caption: latest.results.title ,mimetype: 'application/zip', fileName: `${latest.results.title}.zip` }, { quoted: citel })
-} catch (error) citel.reply('🚫 *Error Accurated !!*');
-}
+} catch (error) {  return citel.reply("```File Not Found```" ) }
 return fs.unlinkSync(`./${randomName}`);     
 })
 
@@ -54,8 +53,7 @@ async(Void, citel, text) => {
         yt += `📃 *${anu.no} - ${anu.title}*\n🔗 _Link : ${anu.url}_ \n\n\n`
     }
  await Void.sendMessage(from,{image:{url: "https://telegra.ph/file/d05c60fb40c1ab9f90600.jpg" },caption: yt + "*ꜱɪᴛʜᴜ-ᴍᴅ ᴡʜᴀᴛꜱᴀᴘᴘ ᴜꜱᴇʀ ʙᴏᴛ*\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱɪᴛʜᴜᴍ ᴋᴀʟʜᴀʀᴀ*" },{ quoted: citel })
-} catch (error) citel.reply('⛔ *Error accurated !!*');
-}
+} catch (error) {  return citel.reply("```File Not Found```" ) }
 return fs.unlinkSync(`./${randomName}`);     
     
 })
@@ -86,7 +84,6 @@ async(Void, citel, text) => {
 *ᴀʟʟ ʀɪɢʜᴛ ʀᴇꜱᴇʀᴠᴇᴅ - ʙʏ ꜱɪᴛʜᴜᴍ ᴋᴀʟʜᴀʀᴀ*`
  await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
    await Void.sendMessage(from, { document : { url : latest.results.dl_link  }  ,caption: latest.results.title ,mimetype: 'application/zip', fileName: `${latest.results.title}.zip` }, { quoted: citel })
-} catch (error) citel.reply('🚫 *Error Accurated !!*');
-}
+} catch (error) {  return citel.reply("```File Not Found```" ) }
 return fs.unlinkSync(`./${randomName}`);     
 })
