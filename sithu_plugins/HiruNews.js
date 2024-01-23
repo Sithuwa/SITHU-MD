@@ -1,10 +1,10 @@
 const moment = require('moment-timezone') 
  const {fetchJson,Module_Exports, tlang } = require('../lib') 
+ const hirunews = require('hirunews-scraper');
  let gis = require("async-g-i-s"); 
  const axios = require('axios') 
  const fetch = require('node-fetch') 
- const Hirunews = require('hirunews-scraper') 
- var api = new hirunews() 
+ 
 
 //---------------------------------------------------------------------------
 
