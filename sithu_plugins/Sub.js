@@ -1,4 +1,3 @@
-const name = require('../setting')
 const { getBuffer, getGroupAdmins, Module_Exports, sithu_plugins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 const {subsearch , subdl }  = require('@sl-code-lords/si-subdl')
 Module_Exports({
