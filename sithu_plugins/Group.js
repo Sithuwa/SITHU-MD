@@ -992,7 +992,7 @@ Module_Exports({
                     .catch((err) => msg.reply("Error :" +err));
             } else if (text.split(" ")[0] === "open"||text.split(" ")[0] === "unmute") {
                 await sithu.bot.groupSettingUpdate(msg.chat, "not_announcement")
-                    .then((res) => msg.reply(``*_ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴜɴᴍᴜᴛᴇᴅ_*`))
+                    .then((res) => msg.reply(`*_ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴜɴᴍᴜᴛᴇᴅ_*`))
                     .catch((err) => msg.reply("Error : " +err));
             } 
 else if(text=="Detail" || text=="Info" || text=="info" || text=="details" ) 
