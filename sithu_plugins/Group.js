@@ -206,7 +206,7 @@ async(Void, citel, text,{ isCreator }) => {
     const groupAdmins = await getAdmin(Void, citel)
     const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
     if (!isAdmins) return citel.reply(tlang().admin)
-const S=m;function Z(){const F=['126402oKAcRa','date','*_Removing\x20User\x20because\x20Warn\x20limit\x20exceeded_*\x0a\x0a*_Total\x20Warnings._*\x0a','chat','8qachoN','580yXDZAo','groupParticipantsUpdate','114528WgITIL','reply','groupMetadata','┃\x20*_•𝚃𝙸𝙼𝙴•_*\x20','find','locale','log','196311jXGmuc','quoted','save','*\x0a┏━━⟪ 𝐒𝐈𝐓𝐇𝐔-𝐌𝐃 ⟫━━┓\x0a┃\x20*_•𝙸𝙽 𝙶𝚁𝙾𝚄𝙿•_*\x20','759700KYdstU','warnedby','pushName','reason','8dUtMfa','2BlOCqD','550MdvhLT','-★-❖- *𝚆𝙰𝚁𝙽* -❖-★-\x0a*_•𝚄𝚂𝙴𝚁•_*\x20@','54828ViphBF','subject','1100323uEahgH','30204512uUuJcj','*_There\x20are\x20total\x20','split','┃\x20*_•𝚆𝙰𝚁𝙽𝙴𝙳-𝙱𝚈•_*\x20','length','sender','setDefault','group','Asia/karachi','../Setting','215XZLRSE','HH:mm:ss','warn','remove'];Z=function(){return F;};return Z();}(function(U,w){const c=m,s=U();while(!![]){try{const q=parseInt(c(0x1eb))/0x1*(parseInt(c(0x1f0))/0x2)+parseInt(c(0x1e7))/0x3*(parseInt(c(0x1ef))/0x4)+-parseInt(c(0x200))/0x5*(-parseInt(c(0x204))/0x6)+-parseInt(c(0x1f5))/0x7*(-parseInt(c(0x1dd))/0x8)+-parseInt(c(0x1f3))/0x9*(-parseInt(c(0x1de))/0xa)+parseInt(c(0x1f1))/0xb*(parseInt(c(0x1e0))/0xc)+-parseInt(c(0x1f6))/0xd;if(q===w)break;else s['push'](s['shift']());}catch(B){s['push'](s['shift']());}}}(Z,0x707d4));function m(Y,U){const w=Z();return m=function(s,q){s=s-0x1dd;let B=w[s];return B;},m(Y,U);}if(!citel['quoted'])return citel[S(0x1e1)]('*_Please\x20Reply\x20a\x20\User_*');const timesam=moment(moment())['format'](S(0x201));moment['tz'][S(0x1fc)](S(0x1fe))[S(0x1e5)]('id');try{let metadata=await Void[S(0x1e2)](citel[S(0x207)]);await new warndb({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202),'reason':text,'group':metadata[S(0x1f4)],'warnedby':citel[S(0x1ed)],'date':timesam})[S(0x1e9)]();let ment=citel[S(0x1e8)][S(0x1fb)];Void['sendMessage'](citel['chat'],{'text':S(0x1f2)+citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+'\x0a*_•𝚁𝙴𝙰𝚂𝙾𝙽•_*\x20'+text+'\x0a*_•𝚆𝙰𝚁𝙽𝙴𝙳-𝙱𝚈•_*\x20'+citel[S(0x1ed)],'mentions':[citel[S(0x1e8)][S(0x1fb)]]},{'quoted':citel});let h=await warndb[S(0x1e4)]({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});const name=require(S(0x1ff));if(h[S(0x1fa)]>name['warncount']){teskd=S(0x206);let h=await warndb[S(0x1e4)]({'id':citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});teskd+=S(0x1f7)+h[S(0x1fa)]+'\x20\x20warnings._*\x0a';for(let i=0x0;i<h[S(0x1fa)];i++){teskd+='*'+(i+0x1)+S(0x1ea)+h[i][S(0x1fd)]+'\x0a',teskd+=S(0x1e3)+h[i][S(0x205)]+'\x0a',teskd+=S(0x1f9)+h[i][S(0x1ec)]+'\x0a',teskd+='┃\x20*_•𝚁𝙴𝙰𝚂𝙾𝙽•_*\x20'+h[i][S(0x1ee)]+'\x0a┃ *_•𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝙳-𝙱𝚈•_* *𝚂𝙸𝚃𝙷𝚄𝙼-𝙺𝙰𝙻𝙷𝙰𝚁𝙰*\x0a┗━━━━━━━━━━⦿\x0a\x0a';}citel[S(0x1e1)](teskd),await Void[S(0x1df)](citel['chat'],[citel['quoted'][S(0x1fb)]],S(0x203));}}catch(Y){console[S(0x1e6)](Y);}
+const S=m;function Z(){const F=['126402oKAcRa','date','*_Removing\x20User\x20because\x20Warn\x20limit\x20exceeded_*\x0a\x0a*_Total\x20Warnings._*\x0a','chat','8qachoN','580yXDZAo','groupParticipantsUpdate','114528WgITIL','reply','groupMetadata','┃\x20*_•𝚃𝙸𝙼𝙴•_*\x20','find','locale','log','196311jXGmuc','quoted','save','*\x0a┏━━⟪ 𝐒𝐈𝐓𝐇𝐔-𝐌𝐃 ⟫━━┓\x0a┃\x20*_•𝙸𝙽 𝙶𝚁𝙾𝚄𝙿•_*\x20','759700KYdstU','warnedby','pushName','reason','8dUtMfa','2BlOCqD','550MdvhLT','-❖- *𝚆𝙰𝚁𝙽* -❖-\x0a*_•𝚄𝚂𝙴𝚁•_*\x20@','54828ViphBF','subject','1100323uEahgH','30204512uUuJcj','*_There\x20are\x20total\x20','split','┃\x20*_•𝚆𝙰𝚁𝙽𝙴𝙳-𝙱𝚈•_*\x20','length','sender','setDefault','group','Asia/karachi','../Setting','215XZLRSE','HH:mm:ss','warn','remove'];Z=function(){return F;};return Z();}(function(U,w){const c=m,s=U();while(!![]){try{const q=parseInt(c(0x1eb))/0x1*(parseInt(c(0x1f0))/0x2)+parseInt(c(0x1e7))/0x3*(parseInt(c(0x1ef))/0x4)+-parseInt(c(0x200))/0x5*(-parseInt(c(0x204))/0x6)+-parseInt(c(0x1f5))/0x7*(-parseInt(c(0x1dd))/0x8)+-parseInt(c(0x1f3))/0x9*(-parseInt(c(0x1de))/0xa)+parseInt(c(0x1f1))/0xb*(parseInt(c(0x1e0))/0xc)+-parseInt(c(0x1f6))/0xd;if(q===w)break;else s['push'](s['shift']());}catch(B){s['push'](s['shift']());}}}(Z,0x707d4));function m(Y,U){const w=Z();return m=function(s,q){s=s-0x1dd;let B=w[s];return B;},m(Y,U);}if(!citel['quoted'])return citel[S(0x1e1)]('*_Please\x20Reply\x20a\x20\User_*');const timesam=moment(moment())['format'](S(0x201));moment['tz'][S(0x1fc)](S(0x1fe))[S(0x1e5)]('id');try{let metadata=await Void[S(0x1e2)](citel[S(0x207)]);await new warndb({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202),'reason':text,'group':metadata[S(0x1f4)],'warnedby':citel[S(0x1ed)],'date':timesam})[S(0x1e9)]();let ment=citel[S(0x1e8)][S(0x1fb)];Void['sendMessage'](citel['chat'],{'text':S(0x1f2)+citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+'\x0a*_•𝚁𝙴𝙰𝚂𝙾𝙽•_*\x20'+text+'\x0a*_•𝚆𝙰𝚁𝙽𝙴𝙳-𝙱𝚈•_*\x20'+citel[S(0x1ed)],'mentions':[citel[S(0x1e8)][S(0x1fb)]]},{'quoted':citel});let h=await warndb[S(0x1e4)]({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});const name=require(S(0x1ff));if(h[S(0x1fa)]>name['warncount']){teskd=S(0x206);let h=await warndb[S(0x1e4)]({'id':citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});teskd+=S(0x1f7)+h[S(0x1fa)]+'\x20\x20warnings._*\x0a';for(let i=0x0;i<h[S(0x1fa)];i++){teskd+='*'+(i+0x1)+S(0x1ea)+h[i][S(0x1fd)]+'\x0a',teskd+=S(0x1e3)+h[i][S(0x205)]+'\x0a',teskd+=S(0x1f9)+h[i][S(0x1ec)]+'\x0a',teskd+='┃\x20*_•𝚁𝙴𝙰𝚂𝙾𝙽•_*\x20'+h[i][S(0x1ee)]+'\x0a┃ *_•𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝙳-𝙱𝚈•_* *𝚂𝙸𝚃𝙷𝚄𝙼-𝙺𝙰𝙻𝙷𝙰𝚁𝙰*\x0a┗━━━━━━━━━━⦿\x0a\x0a';}citel[S(0x1e1)](teskd),await Void[S(0x1df)](citel['chat'],[citel['quoted'][S(0x1fb)]],S(0x203));}}catch(Y){console[S(0x1e6)](Y);}
     
 }
 )
@@ -970,77 +970,76 @@ Module_Exports({
     )
     //---------------------------------------------------------------------------
  Module_Exports({
-             kingcmd: "groupmode",
-             shortcut: ["gmode"],
+             kingcmd: "group",
              infocmd: "mute and unmute group.",
              kingclass: "group",
              react: "⏳",
              kingpath: __filename,
-         },
-         async(bot, man, text) => {
-             //if (!man.isGroup) return man.reply(tlang().group);
-             const groupAdmins = await getAdmin(bot, man)
-             const botNumber = await bot.decodeJid(bot.user.id)
-             const isBotAdmins = man.isGroup ? groupAdmins.includes(botNumber) : false;
-             const isAdmins = man.isGroup ? groupAdmins.includes(man.sender) : false;
-             //if (!man.isGroup) return man.reply(tlang().group);
-             if (!isBotAdmins) return man.reply(tlang().botAdmin);
-             if (!isAdmins) return man.reply(tlang().admin);
-             let Group = await sck.findOne({ id: man.chat });
-             if (text.split(" ")[0] == "close" || text.split(" ")[0] == "mute" ) {
-                 await bot.groupSettingUpdate(man.chat, "announcement")
-                     .then((res) => man.reply(`*_ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴍᴜᴛᴇᴅ_*`))
-                     .catch((err) => man.reply("Error :" +err));
-             } else if (text.split(" ")[0] === "open"||text.split(" ")[0] === "unmute") {
-                 await bot.groupSettingUpdate(man.chat, "not_announcement")
-                     .then((res) => man.reply(`*_ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴜɴ-ᴍᴜᴛᴇᴅ_*`))
-                     .catch((err) => man.reply("Error : " +err));
-             } 
- else if(text=="Detail" || text=="Info" || text=="info" || text=="details" ) 
- {
-     const pp = await bot.profilePictureUrl(man.chat, 'image').catch(_ => null) || ''
-     const groupAdmins = participants.filter(p => p.admin)
-     const listAdmin = groupAdmins.map((v, i) => `  ${i + 1}. wa.me/${v.id.split('@')[0]}`).join('\n')
-     const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || man.chat.split`-`[0] + '@s.whatsapp.net'
- 
-     let ginfos = `
-       *「 INFO GROUP 」*
- *▢ ID :*
-    • ${groupMetadata.id}
- *▢ NAME :* 
-    • ${groupMetadata.subject}
- *▢ Members :*
-    • ${participants.length}
- *▢ Group Owner :*
-    • wa.me/${owner.split('@')[0]}
- *▢ Admins :*
- ${listAdmin}
- *▢ Description :*
-    • ${groupMetadata.infocmd?.toString() || 'unknown'}
- *▢ 🪢 Extra Group Configuration :*";
-   • Group Nsfw :    ${Group.nsfw=='true'? '✅' : '❎'} 
-   • Antilink        :    ${Group.antilink=='true'? '✅' : '❎'}
-   • Economy      :    ${Group.economy=='true'? '✅' : '❎'}
-   • Events         :     ${Group.events=='true'? '✅' : '❎'}
- `.trim()
-     if(Group.events=='true'){
-         ginfos +="\n*▢ Wellcome bot :* \n  • "+Group.welcome;
-         ginfos +="\n\n*▢ Goodbye bot :* \n  • "+Group.goodbye; 
-     }
- return await bot.sendMessage(man.chat,{image:{url : pp} , caption: ginfos } , {quoted:man })
- }
- else
- { 
-     return await man.reply(`*_Give me Text from Below Options_*
- 1: ${prefix}gmode mute
- 2: ${prefix}gmode unmute
+        },
+        async(sithu, msg, text) => {
+            //if (!msg.isGroup) return msg.reply(tlang().group);
+            const groupAdmins = await getAdmin(sithu.bot, msg)
+            const botNumber = await sithu.bot.decodeJid(sithu.bot.user.id)
+            const isBotAdmins = msg.isGroup ? groupAdmins.includes(botNumber) : false;
+            const isAdmins = msg.isGroup ? groupAdmins.includes(msg.sender) : false;
+            //if (!msg.isGroup) return msg.reply(tlang().group);
+            if (!isBotAdmins) return msg.reply(tlang().botAdmin);
+            if (!isAdmins) return msg.reply(tlang().admin);
+	        let Group = await sck.findOne({ id: msg.chat });
+            if (text.split(" ")[0] == "close" || text.split(" ")[0] == "mute" ) {
+                await sithu.bot.groupSettingUpdate(msg.chat, "announcement")
+                    .then((res) => msg.reply(`*_ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴍᴜᴛᴇᴅ_*`))
+                    .catch((err) => msg.reply("Error :" +err));
+            } else if (text.split(" ")[0] === "open"||text.split(" ")[0] === "unmute") {
+                await sithu.bot.groupSettingUpdate(msg.chat, "not_announcement")
+                    .then((res) => msg.reply(``*_ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴜɴᴍᴜᴛᴇᴅ_*`))
+                    .catch((err) => msg.reply("Error : " +err));
+            } 
+else if(text=="Detail" || text=="Info" || text=="info" || text=="details" ) 
+{
+    const pp = await sithu.bot.profilePictureUrl(msg.chat, 'image').catch(_ => null) || ''
+    const groupAdmins = participants.filter(p => p.admin)
+    const listAdmin = groupAdmins.map((v, i) => `  ${i + 1}. wa.me/${v.id.split('@')[0]}`).join('\n')
+    const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || msg.chat.split`-`[0] + '@s.whatsapp.net'
 
- `)
-       //let buttons = [{ buttonId: `${prefix}group open`, buttonText: { displayText: "📍Unmute",},type: 1,},{buttonId: `${prefix}group close`,buttonText: {displayText: "📍Mute",},type: 1, },];     await bot.sendButtonText(man.chat,buttons,`Group Mode`, bot.user.name, man);
-            
- }
-         }
-     )
+    let ginfos = `
+      *「 INFO GROUP 」*
+*▢ ID :*
+   • ${groupMetadata.id}
+*▢ NAME :* 
+   • ${groupMetadata.subject}
+*▢ Members :*
+   • ${participants.length}
+*▢ Group Owner :*
+   • wa.me/${owner.split('@')[0]}
+*▢ Admins :*
+${listAdmin}
+*▢ Description :*
+   • ${groupMetadata.desc?.toString() || 'unknown'}
+*▢ 🪢 Extra Group Configuration :*";
+  • Group Nsfw :    ${Group.nsfw=='true'? '✅' : '❎'} 
+  • Antilink        :    ${Group.antilink=='true'? '✅' : '❎'}
+  • Economy      :    ${Group.economy=='true'? '✅' : '❎'}
+  • Events         :     ${Group.events=='true'? '✅' : '❎'}
+`.trim()
+    if(Group.events=='true'){
+        ginfos +="\n*▢ Wellcome Message :* \n  • "+Group.welcome;
+        ginfos +="\n\n*▢ Goodbye Message :* \n  • "+Group.goodbye; 
+    }
+return await sithu.bot.sendMessage(msg.chat,{image:{url : pp} , caption: ginfos } , {quoted:msg })
+}
+else
+{ 
+    return await msg.send(`*_Uhh Dear Give me Query From Bellow Options_*
+_1:- .group Mute_
+_2:- .group Unmute_
+_3:- .group Info_
+`)
+    //  let buttons = [{ buttonId: `${prefix}group open`, buttonText: { displayText: "📍Unmute",},type: 1,},{buttonId: `${prefix}group close`,buttonText: {displayText: "📍Mute",},type: 1, },];     await sithu.bot.sendButtonText(msg.chat,buttons,`Group Mode`, sithu.bot.user.name, msg);
+           
+}
+        }
+    )
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
@@ -1158,28 +1157,18 @@ Module_Exports({
             use: 'number',
         },
         async(Void, citel, text,{isCreator}) => {
-	//if (!isCreator) return citel.reply("```Only My Owner Can Use This Command```")
             if (!citel.isGroup) return citel.reply(tlang().group);
             const groupAdmins = await getAdmin(Void, citel)
             const botNumber = await Void.decodeJid(Void.user.id)
             const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
             const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
 
-  
-	        if (!isBotAdmins) return await citel.reply(tlang().admin);  
-            if (!isAdmins) return citel.reply(tlang().admin)
-            
-            let users = citel.quoted ? citel.quoted.sender : citel.mentionedJid[0] ? citel.mentionedJid[0] : text.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
-            if (!users) return await citel.reply("*_Please Provide An User._*");
-            if(citel.sender == botNumber ){
-                await Void.groupParticipantsUpdate(citel.chat, [users], "add");
-                await citel.send(`*_User Added Succesfully!_*`)
-                return await Void.sendMessage(citel.chat, { react: { text: '', key: citel.key }});
-            }else {
-                await Void.sendMessage(citel.chat, { react: { text: '', key: citel.key }});
-                await Void.sendMessage(users , {text : `Here's The Group Invite Link\n User @${citel.sender.split("@")[0]} *_Wants To Add You in bellow Group_*\n https://chat.whatsapp.com/${await Void.groupInviteCode(citel.chat)} _ \n*_Join If YOu Feel Free_*?` ,mentions:[citel.sender,]} , {quoted : citel })
-                return await citel.reply(`_Unable To Add User, Invite Sent_`)
-            }
+            if (!text) return citel.reply("Please provide me number.");
+            if (!isCreator) return citel.reply(tlang().owner)
+            if (!isBotAdmins) return citel.reply(tlang().botAdmin);
+            let users = citel.mentionedJid[0] ? citel.mentionedJid[0] : citel.quoted ? citel.quoted.sender : text.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
+            await Void.groupParticipantsUpdate(citel.chat, [users], "add");
+
         }
     )
     //--------------------------------------------------------------------------- 
@@ -1414,7 +1403,7 @@ Module_Exports({
 ┃❀ *•ʟᴇᴠᴇʟ•* ${sck1.level}🍭
 ┃❀ *•ᴇxᴘ•* ${sck1.xp} / ${Levels.xpFor(sck1.level + 1)}
 ┃❀ *•ʀᴏʟᴇ•* *${role}*
-┗━━━━━━━━━━⦿\n ${scap}`   }, { quoted: citel });
+┗━━━━━━━━━━⦿\n ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱɪᴛʜᴜ-ᴍᴅ`   }, { quoted: citel });
 		    }
 	    }
 	})
