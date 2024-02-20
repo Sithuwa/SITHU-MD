@@ -18,6 +18,7 @@ Module_Exports({
     shortcut: ["ig","igdl","instagram"],
     infocmd: "download instagram videos",
     kingclass: "downloader",
+    react:"📥",
     use: "paste insta video link"
 },
 async(sithu,person,memo) => {
@@ -29,6 +30,7 @@ const _0x2e1835=_0x1c3e;function _0x1c3e(_0x21d0f8,_0xcde877){const _0x3098c5=_0
         shortcut: ["fb","fbdl"],
         kingclass: "downloader",
         infocmd: "downloads facebook videos",
+	react:"📥",
         use: "paste fb video link"
         },
        async(sithu, person, memo) => {
@@ -69,6 +71,7 @@ Module_Exports({
 	    shortcut :  ['tt','ttdl'],
             infocmd: "Downloads Tiktok Videos Via Url.",
             kingclass: "downloader",
+	    react:"📥",
             use: "paste tiktok video link",
 },
 
