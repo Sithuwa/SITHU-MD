@@ -21,7 +21,7 @@
 
 ## Click the button below to deploy. | Deploy කිරීමට පහත බටන් එක ක්ලික් කරන්න.
 
-<a href='https://heroku.com/deploy' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku&logoColor=white'/></a>
+<a href='https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FSithuwa%2FSITHU-MD%3Ftab%3Dreadme-ov-file&template=https%3A%2F%2Fgithub.com%2FSithuwa%2FSITHU-MD' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku&logoColor=white'/></a>
 
 ***
 
