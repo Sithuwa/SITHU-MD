@@ -1,4 +1,18 @@
-pp# SITHU-MD
+# SITHU-MD
+
+***
+
+<a href="https://github.com/Sithuwa/SITHU-MD"><img title="Followers" src="https://img.shields.io/github/followers/Sithuwa?e=flat-square">
+<a href="https://github.com/Sithuwa/SITHU-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Sithuwa/SITHU-MD?color=blue&style=flat-square"></a>
+<a href="https://github.com/Sithuwa/SITHU-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Sithuwa/SITHU-MD?color=red&style=flat-square"></a>
+<a href="https://github.com/Sithuwa/SITHU-MD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Sithuwa/SITHU-MD?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://github.com/Sithuwa/SITHU-MD"><img title="Size" src="https://img.shields.io/github/repo-size/Sithuwa/SITHU-MD?style=flat-square&color=green"></a>
+---
+<a align="center"><img src="https://profile-counter.glitch.me/SITHUWA-MD/count.svg" /></a>
+
+<a href="https://m.facebook.com/100049977400815/"><img alt="FaceBook" src="https://img.shields.io/badge/-FaceBook%20-lightgrey?style=for-the-badge&logo=facebook&logoColor=blue"/></a>
+<a href="https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ"><img alt="YouTube" src="https://img.shields.io/badge/-YouTube%20-lightgrey?style=for-the-badge&logo=YouTube&logoColor=red"/></a>
+<a href="https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi"><img alt="Whatsapp" src="https://img.shields.io/badge/-Whatsapp%20-lightgrey?style=for-the-badge&logo=Whatsapp&logoColor=Green"/></a>
 
 ***
 ## Click the button below to get the QR code. | QR කේතය ලබාගැනීමට පහත බටන් එක ක්ලික් කරන්න.
