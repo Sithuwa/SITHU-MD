@@ -107,7 +107,7 @@ async(Void, citel) => {
 *☀️ 𝐓𝐨𝐭𝐚𝐥 𝐒𝐭𝐚𝐫𝐬:* ${data.stargazers_count} stars
 *🎯 𝐅𝐨𝐫𝐤𝐬:* ${data.forks_count} forks
 *🤍 𝐑𝐞𝐩𝐨:* https://github.com/Sithuwa/SITHU-MD
-*🪀 Support Grp:* https://chat.whatsapp.com/GU73HsSG2kXCd8EN9xQtiF
+*🪀 Support Grp:* https://chat.whatsapp.com/H0FUK41cUp8D2Up9BGI8Ji
 *🪀 Public grp:* https://chat.whatsapp.com/IZpUGOxDi9vEogXXyY9Mpi
 *📌 Youtube tt:* https://www.youtube.com/channel/UCVwddJDhIDa4FaWM717xaAQ`
         let buttonMessaged = {
