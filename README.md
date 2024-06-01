@@ -15,9 +15,9 @@
 <a href="https://chat.whatsapp.com/H0FUK41cUp8D2Up9BGI8Ji"><img alt="Whatsapp" src="https://img.shields.io/badge/-Whatsapp%20-lightgrey?style=for-the-badge&logo=Whatsapp&logoColor=Green"/></a>
 
 ***
-## Click the button below to get the QR code. | QR කේතය ලබාගැනීමට පහත බටන් එක ක්ලික් කරන්න.
+## Click the button below to get the PAIR code/QR CODE. | PAIR කේතය/QR කේතය ලබාගැනීමට පහත බටන් එක ක්ලික් කරන්න.
 
-<a href='https://qrsithu-db7e1abfc385.herokuapp.com/' target="_blank"><img alt='SCAN QR' src='https://img.shields.io/badge/Scan_qr-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://myweb1-896b4dd03c7e.herokuapp.com' target="_blank"><img alt='SCAN CODE' src='https://img.shields.io/badge/Scan_qr-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 ## Click the button below to deploy. | Deploy කිරීමට පහත බටන් එක ක්ලික් කරන්න.
 
