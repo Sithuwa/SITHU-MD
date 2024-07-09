@@ -59,6 +59,8 @@ Module_Exports({
     kingcmd: "song1",
     infocmd: "sets goodbye message in specific group.",
     kingclass: "group",
+    filename: __filename,
+    use: '<text>',
 },
 async(Void, citel, text) => {
             let yts = require("secktor-pack");
